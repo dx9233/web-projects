@@ -48,10 +48,13 @@ const { Content } = await work.render();
 </Layout>
 
 <style>
+  h1 {
+    font-style: bold;
+  }
   .post-image {
     justify-content: center;
     height: 100%;
-    width: 1200px;
+    max-width: 1400px;
   }
 
   .post-meta {
@@ -70,5 +73,13 @@ const { Content } = await work.render();
   .post-body {
     justify-content: flex-start;
     font-size: 18px;
+  }
+
+  @media (max-width: 600px) {
+    .post-image {
+      justify-content: center;
+      height: 100%;
+      max-width: 450px;
+    }
   }
 </style>

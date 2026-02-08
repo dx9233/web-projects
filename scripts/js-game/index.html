@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Star Defender</title>
+    <style>
+        #canvas{
+            border: 2px solid black;
+            background-image: url("assets/backgrounds/Background-1.png");
+        }
+        #startScreen, #gameOverScreen{
+            position: absolute;
+            left: 48%;
+            top: 25%;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: center;">
+        <div id="scoreboard"></div>
+        <canvas id="canvas" width="1280" height="720">
+
+        </canvas>
+        <div id="startScreen">
+            <h1>Space Invaders</h1>
+            <button id="startButton">Start Game</button>
+        </div>
+        <div id="gameOverScreen">
+            <h1>Game Over</h1>
+            <button id="restartButton">Restart</button>
+        </div>
+    </div>
+    
+    
+    <script src="game_new.js"></script>
+</body>
+</html>

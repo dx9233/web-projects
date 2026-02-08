@@ -72,7 +72,7 @@ p {
   padding: 20px;
   border-radius: 10px;
   max-width: 400px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .hero-tag {
@@ -136,7 +136,7 @@ p {
 }
 
 .post-card:hover {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .post-image {

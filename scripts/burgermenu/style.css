@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #333;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+/* Desktop Menu */
+.menu {
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* ===== BURGER ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.close {
+  display: none;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .close {
+    display: none;
+  }
+
+  /* ==== NAV ==== */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background: white;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: right 0.3s ease;
+  }
+
+  .menu a {
+    margin: 15px 0;
+    font-size: 18px;
+    color: black;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .menu.active~.close {
+    display: flex;
+  }
+
+  .menu.active~.burger {
+    display: none;
+  }
+}

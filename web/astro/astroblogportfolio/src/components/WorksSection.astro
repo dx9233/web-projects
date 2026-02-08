@@ -43,7 +43,7 @@ const { works } = Astro.props as Props;
 
 <style>
   .work-section {
-    max-width: 960px;
+    max-width: 1100px;
     margin: 3rem auto;
     padding: 0 1rem;
   }
@@ -133,57 +133,57 @@ const { works } = Astro.props as Props;
   /* === Responsive === */
 
   @media (max-width: 1024px) {
-  .work-item {
-    gap: 0.75rem;
+    .work-item {
+      gap: 0.75rem;
+    }
+
+    .work-heading {
+      font-size: 1.5rem;
+    }
+
+    .work-year,
+    .work-category {
+      font-size: 1rem;
+    }
+
+    .work-description {
+      font-size: 0.9rem;
+    }
+
+    .work-image {
+      width: 200px;
+      height: 150px;
+    }
   }
 
-  .work-heading {
-    font-size: 1.5rem;
-  }
+  @media (max-width: 768px) {
+    .work-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-  .work-year,
-  .work-category {
-    font-size: 1rem;
-  }
+    .work-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
 
-  .work-description {
-    font-size: 0.9rem;
-  }
+    .work-content {
+      align-items: center;
+    }
 
-  .work-image {
-    width: 200px;
-    height: 150px;
-  }
-}
+    .work-heading {
+      font-size: 1.25rem;
+    }
 
-@media (max-width: 768px) {
-  .work-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .work-description {
+      font-size: 0.875rem;
+    }
 
-  .work-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
-
-  .work-content {
-    align-items: center;
-  }
-
-  .work-heading {
-    font-size: 1.25rem;
-  }
-
-  .work-description {
-    font-size: 0.875rem;
-  }
-
-  .work-meta {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    .work-meta {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 </style>
