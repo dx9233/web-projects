@@ -1,0 +1,11 @@
+packages:
+  - "web/react/luxurycar-react"
+  - "web/react/strikethehub"
+  - "web/react/nextjs-portfolio"
+  - "web/astro/*"
+  - "mobile/*"
+  - "backend/*"
+
+ignoredBuiltDependencies:
+  - esbuild
+  - sharp

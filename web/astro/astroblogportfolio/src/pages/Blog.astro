@@ -1,0 +1,17 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import BlogSection from "../components/BlogSection.astro";
+import { getCollection } from "astro:content";
+import Categories from "../components/Categories.astro";
+
+const posts = await getCollection("blog");
+---
+
+<Layout>
+  <Header />
+  <Categories />
+  <BlogSection posts={posts} />
+  <Footer />
+</Layout>

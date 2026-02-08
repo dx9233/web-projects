@@ -1,0 +1,9 @@
+.socials svg {
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.socials svg:hover {
+  color: blue;
+}

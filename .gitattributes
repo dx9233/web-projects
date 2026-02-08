@@ -1,0 +1,21 @@
+# Hide all from build and vendor
+# build/** linguist-vendored
+# vendor/** linguist-vendored
+
+# Hide generated files
+# *.min.js linguist-generated
+# *.gen.* linguist-generated
+
+# Hide specific languages
+# *.html linguist-vendored
+# *.css linguist-vendored
+# *.scss linguist-vendored
+# *.astro linguist-vendored
+# *.mdx linguist-vendored
+# *.py linguist-vendored
+# *.php linguist-vendored
+# *.go linguist-vendored
+# *.vue linguist-vendored
+# *.svelte linguist-vendored
+# *.pug linguist-vendored
+# *.dockerfile linguist-vendored

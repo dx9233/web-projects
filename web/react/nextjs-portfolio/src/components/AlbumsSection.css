@@ -1,0 +1,272 @@
+/* Music */
+
+.albums-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.latest-release {
+  flex: 1;
+}
+
+.latest-release ul {
+  margin-top: 10px;
+  font-size: 24px;
+  list-style-type: disc;
+  padding-left: 20px;
+  color: white;
+}
+
+.latest-release span {
+  margin-top: 10px;
+  font-size: 24px;
+  font-style: italic;
+  color: gray;
+}
+
+.latest-release button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.albums-gallery {
+  flex: 1.5;
+}
+
+.albums-gallery h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: right;
+}
+
+.albums-gallery p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: left;
+  color: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.discography-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.album-card {
+  background: #1a1a1a;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 310px;
+  height: 380px;
+}
+
+.album-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.album-card .info {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.album-card .info p {
+  font-weight: bold;
+}
+
+.album-card .info span {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.album-card .actions {
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.album-card .actions a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.album-card .actions a:hover {
+  color: red;
+}
+
+.albums-section .container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.album-card .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library_buttom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 275px;
+  height: 56px;
+  margin-top: 20px;
+}
+
+/* ====== Responsive ====== */
+
+@media (max-width: 1024px) {
+  .albums-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .albums-gallery h2,
+  .albums-gallery p {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .discography-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projectsmusic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .album-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .albums-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discography-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .albums-gallery h2 {
+    font-size: 1.25rem;
+  }
+
+  .latest-release h2 {
+    font-size: 1.25rem;
+  }
+
+  .latest-release ul,
+  .latest-release span {
+    font-size: 16px;
+  }
+
+  .library_buttom button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .album-card {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .library_buttom {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projectsmusic-card {
+    max-width: 700px;
+    height: auto;
+    padding: 20px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .albums-gallery h2,
+  .latest-release h2 {
+    font-size: 1rem;
+  }
+
+  .latest-release ul,
+  .latest-release span {
+    font-size: 14px;
+  }
+
+  .album-card {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .project-info {
+    padding: 10px;
+  }
+
+  .project-info h3 {
+    font-size: 16px;
+  }
+
+  .project-info p {
+    font-size: 12px;
+  }
+
+  .project-btn {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px 14px;
+  }
+}

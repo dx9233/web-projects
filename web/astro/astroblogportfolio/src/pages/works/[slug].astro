@@ -1,0 +1,74 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+export async function getStaticPaths() {
+  const works = await getCollection("works");
+  return works.map((work) => ({
+    params: { slug: work.slug },
+    props: { work },
+  }));
+}
+
+const { work } = Astro.props;
+
+const { Content } = await work.render();
+---
+
+<Layout>
+  <Header />
+  <article class="blog-post">
+    <div class="container">
+      {
+        work.data.image && (
+          <img src={work.data.image} alt={work.data.title} class="post-image" />
+        )
+      }
+
+      <h1>{work.data.title}</h1>
+      <p class="post-meta">
+        {work.data.category && ` | ${work.data.category}`}
+      </p>
+
+      {
+        work.data.description && (
+          <p class="description">{work.data.description}</p>
+        )
+      }
+
+      <div class="post-body">
+        <Content />
+      </div>
+    </div>
+  </article>
+
+  <Footer />
+</Layout>
+
+<style>
+  .post-image {
+    justify-content: center;
+    height: 100%;
+    width: 1200px;
+  }
+
+  .post-meta {
+    justify-content: flex-start;
+    font-size: 16px;
+  }
+
+  .post-tags {
+    justify-content: space-between;
+  }
+
+  .description {
+    justify-content: center;
+  }
+
+  .post-body {
+    justify-content: flex-start;
+    font-size: 18px;
+  }
+</style>

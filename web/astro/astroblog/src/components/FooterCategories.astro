@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+
+// collect unique categories
+const categories = [...new Set(posts.map((p) => p.data.category))];
+---
+
+<div class="footer-categories">
+  <h4>Categories</h4>
+  <ul>
+    {
+      categories.map((category) => (
+        <li>
+          <a href={`/category/${category}`}>{category}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  li a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+  }
+
+  li a:hover {
+    color: blue;
+  }
+</style>

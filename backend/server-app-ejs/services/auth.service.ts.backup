@@ -1,0 +1,36 @@
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import User from "../src/models/User.model";
+
+export class AuthService {
+  async register(email: string, password: string, name: string) {
+    // Проверка существования пользователя
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      throw new Error("User already exists");
+    }
+
+    // Хеширование пароля
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Создание пользователя
+    const user = await User.create({
+      email,
+      password: hashedPassword,
+      name,
+    });
+
+    // Генерация токена
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET!, {
+      expiresIn: "24h",
+    });
+
+    return { user, token };
+  }
+
+  async login(email: string, password: string) {
+    // Логика входа
+  }
+
+  // ... другие методы
+}

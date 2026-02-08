@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@web-projects/ui/*": ["packages/ui/src/*"],
+      "@web-projects/utils/*": ["packages/utils/src/*"]
+    }
+  },
+  "files": [],
+  "references": [
+    { "path": "packages/ui" },
+    { "path": "packages/utils" },
+    { "path": "web/*/**" },
+    { "path": "backend/*" },
+    { "path": "mobile/*" },
+    { "path": "portfolio/*/**" }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "//": "Ignored projects that should not be run in turbo build",
+  "ignore": ["@backend/django-api", "@backend/server-app-ejs", "carrent-app"]
+}
