@@ -1,0 +1,42 @@
+<?php
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
+
+// Health check endpoint
+Route::get('/health', function () {
+    return response()->json([
+        'status' => 'ok',
+        'timestamp' => now()->toDateTimeString(),
+        'service' => 'Laravel API',
+        'database' => DB::connection()->getPdo() ? 'connected' : 'disconnected',
+        'environment' => app()->environment(),
+        'php_version' => PHP_VERSION,
+        'laravel_version' => app()->version(),
+    ]);
+});
+
+// Simple test endpoint
+Route::get('/test', function () {
+    return response()->json([
+        'message' => 'Laravel API is working!',
+        'time' => now()->toDateTimeString(),
+    ]);
+});
+
+// API documentation
+Route::get('/', function () {
+    return response()->json([
+        'name' => 'Laravel API',
+        'version' => '1.0.0',
+        'endpoints' => [
+            'health_check' => '/health',
+            'api_docs' => '/api',
+            'test_endpoint' => '/test',
+        ],
+        'documentation' => 'See /api for available endpoints',
+    ]);
+});
+
+// If you want to keep web routes for admin panel later
+// Route::get('/admin', [AdminController::class, 'index'])->middleware('auth');

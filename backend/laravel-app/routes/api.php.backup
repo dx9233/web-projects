@@ -1,0 +1,60 @@
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+// API Health check
+Route::get('/health', function (Request $request) {
+    return response()->json([
+        'status' => 'healthy',
+        'timestamp' => now()->toISOString(),
+        'service' => config('app.name'),
+        'environment' => config('app.env'),
+    ]);
+});
+
+// Test endpoint
+Route::get('/test', function (Request $request) {
+    return response()->json([
+        'message' => 'API endpoint is working',
+        'method' => $request->method(),
+        'user_agent' => $request->userAgent(),
+    ]);
+});
+
+// Demo endpoints for car rental API
+Route::prefix('v1')->group(function () {
+    // Cars endpoints
+    Route::get('/cars', function () {
+        return response()->json([
+            'data' => [
+                ['id' => 1, 'brand' => 'Toyota', 'model' => 'Camry', 'year' => 2022],
+                ['id' => 2, 'brand' => 'BMW', 'model' => 'X5', 'year' => 2023],
+            ],
+            'meta' => ['total' => 2, 'page' => 1]
+        ]);
+    });
+    
+    // Bookings endpoint
+    Route::post('/bookings', function (Request $request) {
+        $validated = $request->validate([
+            'car_id' => 'required|integer',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date',
+        ]);
+        
+        return response()->json([
+            'success' => true,
+            'message' => 'Booking created successfully',
+            'booking_id' => rand(1000, 9999),
+            'data' => $validated,
+        ], 201);
+    });
+});
+
+// Protected routes (for future use with auth)
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+});

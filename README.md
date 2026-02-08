@@ -12,6 +12,7 @@
 ```
 monorepo/
   backend/
+    laravel-app/
     server-app-ejs/
   mobile/
     carrent-app/ RN app
@@ -39,10 +40,24 @@ monorepo/
 
 ### All projects at once
 
-```bash
-pnpm dev        # runs all dev servers in parallel
-pnpm build      # builds everything
-```
+| Script                 | Description                         |
+| ---------------------- | ----------------------------------- |
+| **pnpm install:all**   | Installing all dependencies         |
+| **pnpm install:php**   | Installing all dependencies **PHP** |
+| **pnpm install:js**    | Installing all dependencies **JS**  |
+| **pnpm build:all**     | Build all projects                  |
+| **pnpm build:laravel** | Build **Laravel**                   |
+| **pnpm build:js**      | Build all JS-projects               |
+| **pnpm dev:all**       | All dev servers                     |
+| **pnpm dev:laravel**   | Dev server **Laravel**              |
+| **pnpm dev:next**      | Dev server **Next**                 |
+| **pnpm dev:react**     | Dev server **React**                |
+| **pnpm dev:astro**     | Dev server **Astro**                |
+| **pnpm test:all**      | All testing                         |
+| **pnpm lint:all**      |                                     |
+| **pnpm db:refresh**    |                                     |
+| **pnpm db:migrate**    |                                     |
+| **pnpm db:seed**       |                                     |
 
 ### One project
 
@@ -55,6 +70,12 @@ Check the list of available projects:
 
 ```bash
 pnpm list -r
+```
+
+### Dev server Laravel
+
+```bash
+php artisan serve
 ```
 
 ---
