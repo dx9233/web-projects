@@ -12,9 +12,7 @@
 ```
 monorepo/
   backend/
-    django-app/
     laravel-app/
-    server-app-ejs/
   mobile/
     carrent-app/ RN app
   packages/
@@ -87,7 +85,7 @@ php artisan serve
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" width="40" height="40" alt="Laravel" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40" height="40" alt="PHP" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="40" height="40" alt="Sqlite" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" />
+ <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" /> -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" width="40" height="40" alt="Vite" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg" width="40" height="40" alt="Composer" />
 </p>
@@ -96,12 +94,10 @@ php artisan serve
 
 |     | Projects               | Stack                    | Discription                   | Demo     | Folder                                 |
 | --- | ---------------------- | ------------------------ | ----------------------------- | -------- | -------------------------------------- |
-| 1   | **django-app**         | Django, Python           | Backend Django app            | [Demo]() | [Link](/backend/django-app/)           |
-| 2   | **laravel-app**        | PHP, SQL, Laravel        | Backend Laravel app           | [Demo]() | [Link](/backend/laravel-app/)          |
-| 3   | **server-app-ejs**     | TS, JS, Express          | Express backend app           | [Demo]() | [Link](/backend/server-app-ejs/)       |
-| 4   | **carrent-app**        | React Native, TS, Kotlin | Car rent mobile app           | [Demo]() | [Link](/mobile/carrent-app/)           |
-| 5   | **astroblog**          | Astro, TypeScript        | Astro blog template           | [Demo]() | [Link](/web/astro/astroblog/)          |
-| 6   | **astroblogportfolio** | Astro, TypeScript        | Astro blog-portfolio template | [Demo]() | [Link](/web/astro/astroblogportfolio/) |
-| 7   | **luxurycar-react**    | React                    | React landing page            | [Demo]() | [Link](/web/react/luxurycar-react/)    |
-| 8   | **strikethehub**       | React                    | Gaming Portal                 | [Demo]() | [Link](/web/react/strikethehub/)       |
-| 9   | **nextjs-portfolio**   | React, Next, TS          | Main portfolio                | [Demo]() | [Link](/web/react/nextjs-portfolio/)   |
+| 1   | **laravel-app**        | PHP, SQL, Laravel        | Backend Laravel app           | [Demo]() | [Link](/backend/laravel-app/)          |
+| 2   | **carrent-app**        | React Native, TS, Kotlin | Car rent mobile app           | [Demo]() | [Link](/mobile/carrent-app/)           |
+| 3   | **astroblog**          | Astro, TypeScript        | Astro blog template           | [Demo]() | [Link](/web/astro/astroblog/)          |
+| 4   | **astroblogportfolio** | Astro, TypeScript        | Astro blog-portfolio template | [Demo]() | [Link](/web/astro/astroblogportfolio/) |
+| 5   | **luxurycar-react**    | React                    | React landing page            | [Demo]() | [Link](/web/react/luxurycar-react/)    |
+| 6   | **strikethehub**       | React                    | Gaming Portal                 | [Demo]() | [Link](/web/react/strikethehub/)       |
+| 7   | **nextjs-portfolio**   | React, Next, TS          | Main portfolio                | [Demo]() | [Link](/web/react/nextjs-portfolio/)   |
