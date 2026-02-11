@@ -2,6 +2,7 @@ packages:
   - "web/react/luxurycar-react"
   - "web/react/strikethehub"
   - "web/react/nextjs-portfolio"
+  - "web/other/beauty-salon"
   - "web/astro/*"
   - "mobile/*"
   - "backend/*"

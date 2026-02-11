@@ -75,6 +75,11 @@
       "outputs": ["dist/**"]
     },
 
+    "beauty-salon#build": {
+      "dependsOn": [],
+      "outputs": ["dist/**"]
+    },
+
     // Dev Task
     "dev": {
       "cache": false,
