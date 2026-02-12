@@ -21,11 +21,9 @@ monorepo/
   web/
     astro/
       astroblog/ # AstroJS Blog
-      astroblogportfolio/ # AstroJS Blog Portfolio
     react/
       luxurycar-react/ # React landing
       nextjs-portfolio/
-      strikethehub/ # React Game Portal
     other/
       beauty-salon/ Vue App
   package.json
@@ -95,13 +93,11 @@ php artisan serve
 
 ## Projects
 
-|     | Projects               | Stack                    | Discription                   | Demo     | Folder                                 |
-| --- | ---------------------- | ------------------------ | ----------------------------- | -------- | -------------------------------------- |
-| 1   | **laravel-app**        | PHP, SQL, Laravel        | Backend Laravel app           | [Demo]() | [Link](/backend/laravel-app/)          |
-| 2   | **carrent-app**        | React Native, TS, Kotlin | Car rent mobile app           | [Demo]() | [Link](/mobile/carrent-app/)           |
-| 3   | **astroblog**          | Astro, TypeScript        | Astro blog template           | [Demo]() | [Link](/web/astro/astroblog/)          |
-| 4   | **astroblogportfolio** | Astro, TypeScript        | Astro blog-portfolio template | [Demo]() | [Link](/web/astro/astroblogportfolio/) |
-| 5   | **luxurycar-react**    | React                    | React landing page            | [Demo]() | [Link](/web/react/luxurycar-react/)    |
-| 6   | **strikethehub**       | React                    | Gaming Portal                 | [Demo]() | [Link](/web/react/strikethehub/)       |
-| 7   | **nextjs-portfolio**   | React, Next, TS          | Main portfolio                | [Demo]() | [Link](/web/react/nextjs-portfolio/)   |
-| 8   | **beauty-salon**       | Vue                      | Beauty salon Vue App          | [Demo]() | [Link](/web/other/beauty-salon/)       |
+|     | Projects             | Stack                    | Discription          | Demo     | Folder                               |
+| --- | -------------------- | ------------------------ | -------------------- | -------- | ------------------------------------ |
+| 1   | **laravel-app**      | PHP, SQL, Laravel        | Backend Laravel app  | [Demo]() | [Link](/backend/laravel-app/)        |
+| 2   | **carrent-app**      | React Native, TS, Kotlin | Car rent mobile app  | [Demo]() | [Link](/mobile/carrent-app/)         |
+| 3   | **astroblog**        | Astro, TypeScript        | Astro blog template  | [Demo]() | [Link](/web/astro/astroblog/)        |
+| 4   | **luxurycar-react**  | React                    | React landing page   | [Demo]() | [Link](/web/react/luxurycar-react/)  |
+| 5   | **nextjs-portfolio** | React, Next, TS          | Main portfolio       | [Demo]() | [Link](/web/react/nextjs-portfolio/) |
+| 6   | **beauty-salon**     | Vue                      | Beauty salon Vue App | [Demo]() | [Link](/web/other/beauty-salon/)     |
