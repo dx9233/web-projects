@@ -18,8 +18,11 @@
       <div class="testimonial-content">
         <h4>Leslie Alexander</h4>
         <small>Moncton, Canada</small>
-        <h3>$title</h3>
-        <p>$discription</p>
+        <h3>Neque porro quisquam est qui dolum</h3>
+        <p>
+          Sign up for our newsletter to stay up-to-date on the latest
+          promotions, discounts, and new features releases..
+        </p>
       </div>
     </div>
 

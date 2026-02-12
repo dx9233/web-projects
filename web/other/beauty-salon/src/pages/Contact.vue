@@ -4,6 +4,8 @@ import ContactTop from "@/components/ContactTop.vue";
 </script>
 
 <template>
-  <ContactTop />
-  <ContactForm />
+  <main>
+    <ContactTop />
+    <ContactForm />
+  </main>
 </template>

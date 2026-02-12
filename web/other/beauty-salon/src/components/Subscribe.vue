@@ -3,8 +3,12 @@
     <div class="subscribe-box">
       <img src="https://wallpapercave.com/wp/wp14267504.jpg" alt="Hair Salon" />
       <div class="subscribe-content">
-        <h2>$title</h2>
-        <p>$discription</p>
+        <h2>Subscribe to newsletter</h2>
+        <p>
+          "It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem of distribution it look like readable English."
+        </p>
         <form class="subscribe-form">
           <input type="email" placeholder="Enter your mail" required />
           <button type="submit">Subscribe</button>
@@ -62,6 +66,7 @@
 
 .subscribe-form {
   display: flex;
+  flex-direction: row;
   border: 1px solid #ddd;
   border-radius: 30px;
   overflow: hidden;

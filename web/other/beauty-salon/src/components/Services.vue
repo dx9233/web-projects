@@ -2,8 +2,8 @@
   <section class="services-section">
     <div class="container">
       <h3>Our Services</h3>
-      <h2>$title</h2>
-      <p class="subtitle">$subtitle</p>
+      <h2>Recommended</h2>
+      <p class="subtitle">Lorem ipsum dolor sit amet consectetur. Eu quis enim tempor et proin neque.</p>
 
       <div class="services-grid">
         <div class="card">

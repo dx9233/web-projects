@@ -6,29 +6,29 @@
       </div>
 
       <div class="social-icons">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" @click.prevent><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" @click.prevent><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" @click.prevent><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" @click.prevent><i class="fa-brands fa-instagram"></i></a>
       </div>
 
       <div class="footer-columns">
         <div class="footer-col">
           <h4>Explore</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/about">About Us</router-link></li>
+            <li><router-link to="/services">Services</router-link></li>
+            <li><router-link to="/blog">Blog</router-link></li>
+            <li><router-link to="/contact">Contact Us</router-link></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Utility Pages</h4>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
+            <li><router-link to="/privacy">Privacy Policy</router-link></li>
+            <li><router-link to="/terms">Terms of Use</router-link></li>
           </ul>
         </div>
 
@@ -144,6 +144,22 @@ footer {
   font-size: 13px;
   color: #ccc;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.footer-col ul li a:hover {
+  color: #9b5f74;
+}
+
+.social-icons a {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

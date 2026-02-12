@@ -2,8 +2,10 @@
   <section class="hero">
     <div class="hero-content">
       <p class="category">Hair Salon, Masseuse, Beauty Salon</p>
-      <h1>$title</h1>
-      <p class="desc">$subtitle</p>
+      <h1>Find a service<br />close to you</h1>
+      <p class="desc">
+        There are many variations of passages of Lorem Ipsum available.
+      </p>
 
       <form class="search-box">
         <input type="text" placeholder="Book your services..." />
@@ -25,7 +27,6 @@
   align-items: center;
   justify-content: center;
   padding: 100px 60px;
-  width: 100%;
   height: 100vh;
 }
 
@@ -69,6 +70,7 @@
 /* ---------- SEARCH FORM ---------- */
 .search-box {
   display: flex;
+  flex-direction: row;
   background: #fff;
   border-radius: 50px;
   overflow: hidden;
