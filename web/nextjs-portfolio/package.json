@@ -2,11 +2,13 @@
   "name": "nextjs-portfolio",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pnpm-fix": "pnpm install --shamefully-hoist && next build",
+    "build:clean": "rm -rf .next && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.1.0",

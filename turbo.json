@@ -30,9 +30,8 @@
       ]
     },
 
-    // NextJS
     "nextjs-portfolio#build": {
-      "dependsOn": ["^build"],
+      "dependsOn": [],
       "outputs": [".next/**", "!.next/cache/**"],
       "env": ["NODE_OPTIONS=--max-old-space-size=4096"],
       "inputs": [
@@ -54,28 +53,13 @@
       "outputs": ["dist/**"]
     },
 
-    "mainportfolio#build": {
-      "dependsOn": [],
-      "outputs": ["dist/**"]
-    },
-
     // Vite
     "luxurycar-react#build": {
       "dependsOn": [],
       "outputs": ["dist/**"]
     },
 
-    "react-portfolio#build": {
-      "dependsOn": [],
-      "outputs": ["dist/**"]
-    },
-
-    "strikethehub#build": {
-      "dependsOn": [],
-      "outputs": ["dist/**"]
-    },
-
-    "beauty-salon#build": {
+    "beauty-salon-vue#build": {
       "dependsOn": [],
       "outputs": ["dist/**"]
     },

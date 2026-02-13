@@ -1,7 +1,7 @@
-# Установка зависимостей для WEB-PROJECTS
+# Installing dependencies for WEB-PROJECTS
 Write-Host "Starting WEB-PROJECTS setup..." -ForegroundColor Cyan
 
-# 1. Проверяем PNPM
+# 1. Checking PNPM
 if (-not (Get-Command pnpm -ErrorAction SilentlyContinue)) {
   Write-Host "Installing PNPM..." -ForegroundColor Yellow
   npm install -g pnpm
