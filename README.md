@@ -19,13 +19,10 @@ monorepo/
     ui/
     utils/
   web/
-    astro/
-      astroblog/ # AstroJS Blog
-    react/
-      luxurycar-react/ # React landing
-      nextjs-portfolio/
-    other/
-      beauty-salon/ Vue App
+    astroblog/ # AstroJS Blog
+    luxurycar-react/ # React landing
+    nextjs-portfolio/
+    beauty-salon/ Vue App
   package.json
   pnpm-workspace.yaml
   turbo.json
