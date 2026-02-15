@@ -21,7 +21,6 @@ monorepo/
   web/
     astroblog/ # AstroJS Blog
     luxurycar-react/ # React landing
-    nextjs-portfolio/
     beauty-salon/ Vue App
   package.json
   pnpm-workspace.yaml
@@ -90,11 +89,10 @@ php artisan serve
 
 ## Projects
 
-|     | Projects             | Stack                    | Discription          | Demo     | Folder                               |
-| --- | -------------------- | ------------------------ | -------------------- | -------- | ------------------------------------ |
-| 1   | **laravel-app**      | PHP, SQL, Laravel        | Backend Laravel app  | [Demo]() | [Link](/backend/laravel-app/)        |
-| 2   | **carrent-app**      | React Native, TS, Kotlin | Car rent mobile app  | [Demo]() | [Link](/mobile/carrent-app/)         |
-| 3   | **astroblog**        | Astro, TypeScript        | Astro blog template  | [Demo]() | [Link](/web/astro/astroblog/)        |
-| 4   | **luxurycar-react**  | React                    | React landing page   | [Demo]() | [Link](/web/react/luxurycar-react/)  |
-| 5   | **nextjs-portfolio** | React, Next, TS          | Main portfolio       | [Demo]() | [Link](/web/react/nextjs-portfolio/) |
-| 6   | **beauty-salon**     | Vue                      | Beauty salon Vue App | [Demo]() | [Link](/web/other/beauty-salon/)     |
+|     | Projects            | Stack                    | Discription          | Demo     | Folder                              |
+| --- | ------------------- | ------------------------ | -------------------- | -------- | ----------------------------------- |
+| 1   | **laravel-app**     | PHP, SQL, Laravel        | Backend Laravel app  | [Demo]() | [Link](/backend/laravel-app/)       |
+| 2   | **carrent-app**     | React Native, TS, Kotlin | Car rent mobile app  | [Demo]() | [Link](/mobile/carrent-app/)        |
+| 3   | **astroblog**       | Astro, TypeScript        | Astro blog template  | [Demo]() | [Link](/web/astro/astroblog/)       |
+| 4   | **luxurycar-react** | React                    | React landing page   | [Demo]() | [Link](/web/react/luxurycar-react/) |
+| 5   | **beauty-salon**    | Vue                      | Beauty salon Vue App | [Demo]() | [Link](/web/other/beauty-salon/)    |
