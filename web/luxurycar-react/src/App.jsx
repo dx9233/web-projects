@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { PopupProvider } from "./contexts/PopupContext";
+// import { PopupProvider } from "./contexts/PopupContext";
 
 // Components
 import NavBar from "./components/NavBar";
@@ -18,17 +18,15 @@ function App() {
   }, []);
 
   return (
-    <PopupProvider>
-      <div>
-        <NavBar />
-        <Hero />
-        <Services />
-        <Frame />
-        <Features />
-        <CtaSection />
-        <Footer />
-      </div>
-    </PopupProvider>
+    <div>
+      <NavBar />
+      <Hero />
+      <Services />
+      <Frame />
+      <Features />
+      <CtaSection />
+      <Footer />
+    </div>
   );
 }
 

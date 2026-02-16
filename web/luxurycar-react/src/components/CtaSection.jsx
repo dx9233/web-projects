@@ -1,9 +1,11 @@
 import React from "react";
 import "./CtaSection.css";
-import { useOpenPopup } from "../hooks/useOpenPopup";
+// import { useOpenPopup } from "../hooks/useOpenPopup";
 
 const CtaSection = () => {
-  const openPopup = useOpenPopup();
+  {
+    /* const openPopup = useOpenPopup(); */
+  }
   return (
     <section className="cta-section">
       <div className="cta-container">
@@ -16,11 +18,7 @@ const CtaSection = () => {
             Click the link bellow. Fill out the details and
             <br /> we’ll get back to you in less than 24 hours.
           </p>
-          <a
-            href="https://example.com/"
-            className="cta-btn"
-            onClick={openPopup}
-          >
+          <a href="https://example.com/" className="cta-btn">
             Get a quote now
           </a>
         </div>

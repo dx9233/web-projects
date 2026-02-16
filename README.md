@@ -89,10 +89,10 @@ php artisan serve
 
 ## Projects
 
-|     | Projects            | Stack                    | Discription          | Demo     | Folder                              |
-| --- | ------------------- | ------------------------ | -------------------- | -------- | ----------------------------------- |
-| 1   | **laravel-app**     | PHP, SQL, Laravel        | Backend Laravel app  | [Demo]() | [Link](/backend/laravel-app/)       |
-| 2   | **carrent-app**     | React Native, TS, Kotlin | Car rent mobile app  | [Demo]() | [Link](/mobile/carrent-app/)        |
-| 3   | **astroblog**       | Astro, TypeScript        | Astro blog template  | [Demo]() | [Link](/web/astro/astroblog/)       |
-| 4   | **luxurycar-react** | React                    | React landing page   | [Demo]() | [Link](/web/react/luxurycar-react/) |
-| 5   | **beauty-salon**    | Vue                      | Beauty salon Vue App | [Demo]() | [Link](/web/other/beauty-salon/)    |
+|     | Projects            | Stack                    | Discription          | Demo                                                      | Folder                              |
+| --- | ------------------- | ------------------------ | -------------------- | --------------------------------------------------------- | ----------------------------------- |
+| 1   | **laravel-app**     | PHP, SQL, Laravel        | Backend Laravel app  |                                                           | [Link](/backend/laravel-app/)       |
+| 2   | **carrent-app**     | React Native, TS, Kotlin | Car rent mobile app  |                                                           | [Link](/mobile/carrent-app/)        |
+| 3   | **astroblog**       | Astro, TypeScript        | Astro blog template  | [Demo](https://willowy-donut-bc88b6.netlify.app/)         | [Link](/web/astro/astroblog/)       |
+| 4   | **luxurycar-react** | React                    | React landing page   | [Demo](https://coruscating-bombolone-3ad21f.netlify.app/) | [Link](/web/react/luxurycar-react/) |
+| 5   | **beauty-salon**    | Vue                      | Beauty salon Vue App | [Demo](https://starlit-empanada-28901c.netlify.app/)      | [Link](/web/other/beauty-salon/)    |
