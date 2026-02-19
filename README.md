@@ -12,7 +12,10 @@
 ```
 monorepo/
   backend/
+    beauty-salon-backend/
     laravel-app/
+  mobile/
+    carrent-app/
   packages/
     ui/
     utils/
@@ -92,9 +95,10 @@ php artisan serve
 |     | Projects                 | Stack             | Discription                   | Demo | Folder                                 |
 | --- | ------------------------ | ----------------- | ----------------------------- | ---- | -------------------------------------- |
 | 1   | **beauty-salon-backend** | Vanilla PHP       | Backend for Beauty Salon      |      | [Link](/backend/beauty-salon-backend/) |
-| 1   | **laravel-app**          | PHP, SQL, Laravel | Backend Laravel app           |      | [Link](/backend/laravel-app/)          |
-| 3   | **astroblog**            | Astro, TypeScript | Astro blog template           |      | [Link](/web/astroblog/)                |
-| 3   | **astroblogportfolio**   | Astro, TypeScript | Astro blog-portfolio template |      | [Link](/web/astroblogportfolio/)       |
-| 3   | **beauty-salon**         | Vue               | Vue Beauty Salon App          |      | [Link](/web/beauty-salon/)             |
-| 4   | **gameplatform**         | React             | React game platform           |      | [Link](/web/gameplatform/)             |
-| 4   | **luxurycar-react**      | React             | React landing page            |      | [Link](/web/luxurycar-react//)         |
+| 2   | **laravel-app**          | PHP, SQL, Laravel | Backend Laravel app           |      | [Link](/backend/laravel-app/)          |
+| 3   | **carrent-app**          | React Native, TS  | Car Rent App                  |      | [Link](/mobile/carrent-app/)           |
+| 4   | **astroblog**            | Astro, TypeScript | Astro blog template           |      | [Link](/web/astroblog/)                |
+| 5   | **astroblogportfolio**   | Astro, TypeScript | Astro blog-portfolio template |      | [Link](/web/astroblogportfolio/)       |
+| 6   | **beauty-salon**         | Vue               | Vue Beauty Salon App          |      | [Link](/web/beauty-salon/)             |
+| 7   | **gameplatform**         | React             | React game platform           |      | [Link](/web/gameplatform/)             |
+| 8   | **luxurycar-react**      | React             | React landing page            |      | [Link](/web/luxurycar-react//)         |
