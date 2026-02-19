@@ -99,16 +99,15 @@ php -S localhost:8000
 
 ## Projects
 
-|             |         Projects         |       Stack       |          Discription          | Demo |                 Folder                 |
-| :---------: | :----------------------: | :---------------: | :---------------------------: | :--: | :------------------------------------: |
-| **Backend** |                          |                   |                               |      |                                        |
-|      1      | **beauty-salon-backend** |    Vanilla PHP    |   Backend for Beauty Salon    |      | [Link](/backend/beauty-salon-backend/) |
-|      2      |     **laravel-app**      | PHP, SQL, Laravel |      Backend Laravel app      |      |     [Link](/backend/laravel-app/)      |
-| **Mobile**  |                          |                   |                               |      |                                        |
-|      3      |     **carrent-app**      | React Native, TS  |         Car Rent App          |      |      [Link](/mobile/carrent-app/)      |
-|   **Web**   |                          |                   |                               |      |                                        |
-|      4      |      **astroblog**       | Astro, TypeScript |      Astro blog template      |      |        [Link](/web/astroblog/)         |
-|      5      |  **astroblogportfolio**  | Astro, TypeScript | Astro blog-portfolio template |      |    [Link](/web/astroblogportfolio/)    |
-|      6      |     **beauty-salon**     |        Vue        |     Vue Beauty Salon App      |      |       [Link](/web/beauty-salon/)       |
-|      7      |     **gameplatform**     |       React       |      React game platform      |      |       [Link](/web/gameplatform/)       |
-|      8      |   **luxurycar-react**    |       React       |      React landing page       |      |     [Link](/web/luxurycar-react//)     |
+|             |        Projects        |       Stack       |          Discription          | Demo |              Folder              |
+| :---------: | :--------------------: | :---------------: | :---------------------------: | :--: | :------------------------------: |
+| **Backend** |                        |                   |                               |      |                                  |
+|      1      |    **laravel-app**     | PHP, SQL, Laravel |      Backend Laravel app      |      |  [Link](/backend/laravel-app/)   |
+| **Mobile**  |                        |                   |                               |      |                                  |
+|      2      |    **carrent-app**     | React Native, TS  |         Car Rent App          |      |   [Link](/mobile/carrent-app/)   |
+|   **Web**   |                        |                   |                               |      |                                  |
+|      3      |     **astroblog**      | Astro, TypeScript |      Astro blog template      |      |     [Link](/web/astroblog/)      |
+|      4      | **astroblogportfolio** | Astro, TypeScript | Astro blog-portfolio template |      | [Link](/web/astroblogportfolio/) |
+|      5      |    **beauty-salon**    |        Vue        |     Vue Beauty Salon App      |      |    [Link](/web/beauty-salon/)    |
+|      6      |    **gameplatform**    |       React       |      React game platform      |      |    [Link](/web/gameplatform/)    |
+|      7      |  **luxurycar-react**   |       React       |      React landing page       |      |  [Link](/web/luxurycar-react//)  |
