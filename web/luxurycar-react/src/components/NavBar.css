@@ -1,0 +1,93 @@
+/* Navbar */
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-links a,
+  .quote-btn {
+    text-decoration: none;
+    color: white;
+    font-size: 0.95rem;
+  }
+
+  /* Burger */
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .burger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+  }
+
+  .burger,
+  .close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .burger img,
+  .close img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 0;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  .quote-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  .github-action {
+    background: red;
+    z-index: 999;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+
+  .github-action:hover {
+    background: green;
+  }

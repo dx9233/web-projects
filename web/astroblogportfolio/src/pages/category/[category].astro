@@ -1,0 +1,74 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  // collect unique categories
+  const categories = [...new Set(posts.map((p) => p.data.category))];
+
+  return categories.map((category) => ({
+    params: { category },
+    props: {
+      category,
+      posts: posts.filter((p) => p.data.category === category),
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+---
+
+<Layout>
+  <Header />
+  <section class="category-page">
+    <div class="container">
+      <h1>Category: {category}</h1>
+
+      <div class="posts-grid">
+        {
+          posts.map((post) => (
+            <article class="post-card">
+              <a href={`/blog/${post.slug}`}>
+                <img
+                  src={post.data.image}
+                  alt={post.data.title}
+                  class="post-image"
+                />
+                <div class="post-content">
+                  <h3>{post.data.title}</h3>
+                  <p>{post.data.description}</p>
+                </div>
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  h1 {
+    font-size: 20px;
+  }
+  .post-content h3 {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+
+  .post-content h3:hover {
+    color: blue;
+  }
+
+  .post-content p {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+</style>

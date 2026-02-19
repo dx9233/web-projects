@@ -1,0 +1,60 @@
+ /* CTA */
+
+  .cta-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-container {
+    position: relative;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    align-items: center;
+    padding: 60px;
+    z-index: 0;
+  }
+
+  .cta-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/public/assets/img/video.png");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(30%);
+    z-index: 0;
+  }
+
+  .cta-text {
+    flex: 1;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-text h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .cta-text p {
+    margin-bottom: 30px;
+    color: #ccc;
+  }
+
+  .cta-btn {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+  }
+
+  .cta-btn:hover {
+    opacity: 0.7;
+  }

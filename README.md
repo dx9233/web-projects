@@ -13,15 +13,14 @@
 monorepo/
   backend/
     laravel-app/
-  mobile/
-    carrent-app/ RN app
   packages/
     ui/
     utils/
   web/
-    astroblog/ # AstroJS Blog
-    luxurycar-react/ # React landing
-    beauty-salon/ Vue App
+    astroblog/
+    astroblogportfolio/
+    gameplatform/
+    luxurycar-react/
   package.json
   pnpm-workspace.yaml
   turbo.json
@@ -89,10 +88,10 @@ php artisan serve
 
 ## Projects
 
-|     | Projects            | Stack                    | Discription          | Demo                                                      | Folder                              |
-| --- | ------------------- | ------------------------ | -------------------- | --------------------------------------------------------- | ----------------------------------- |
-| 1   | **laravel-app**     | PHP, SQL, Laravel        | Backend Laravel app  |                                                           | [Link](/backend/laravel-app/)       |
-| 2   | **carrent-app**     | React Native, TS, Kotlin | Car rent mobile app  |                                                           | [Link](/mobile/carrent-app/)        |
-| 3   | **astroblog**       | Astro, TypeScript        | Astro blog template  | [Demo](https://willowy-donut-bc88b6.netlify.app/)         | [Link](/web/astro/astroblog/)       |
-| 4   | **luxurycar-react** | React                    | React landing page   | [Demo](https://coruscating-bombolone-3ad21f.netlify.app/) | [Link](/web/react/luxurycar-react/) |
-| 5   | **beauty-salon**    | Vue                      | Beauty salon Vue App | [Demo](https://starlit-empanada-28901c.netlify.app/)      | [Link](/web/other/beauty-salon/)    |
+|     | Projects               | Stack             | Discription                   | Demo     | Folder                           |
+| --- | ---------------------- | ----------------- | ----------------------------- | -------- | -------------------------------- |
+| 1   | **laravel-app**        | PHP, SQL, Laravel | Backend Laravel app           |          | [Link](/backend/laravel-app/)    |
+| 3   | **astroblog**          | Astro, TypeScript | Astro blog template           | [Demo]() | [Link](/web/astroblog/)          |
+| 3   | **astroblogportfolio** | Astro, TypeScript | Astro blog-portfolio template | [Demo]() | [Link](/web/astroblogportfolio/) |
+| 4   | **gameplatform**       | React             | React game platform           | [Demo]() | [Link](/web/gameplatform/)       |
+| 4   | **luxurycar-react**    | React             | React landing page            | [Demo]() | [Link](/web/luxurycar-react//)   |
