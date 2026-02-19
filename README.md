@@ -95,6 +95,6 @@ php artisan serve
 | 1   | **laravel-app**          | PHP, SQL, Laravel | Backend Laravel app           |      | [Link](/backend/laravel-app/)          |
 | 3   | **astroblog**            | Astro, TypeScript | Astro blog template           |      | [Link](/web/astroblog/)                |
 | 3   | **astroblogportfolio**   | Astro, TypeScript | Astro blog-portfolio template |      | [Link](/web/astroblogportfolio/)       |
-| 3   | **beauty-salon**         | Vue               | Astro blog-portfolio template |      | [Link](/web/beauty-salon/)             |
+| 3   | **beauty-salon**         | Vue               | Vue Beauty Salon App          |      | [Link](/web/beauty-salon/)             |
 | 4   | **gameplatform**         | React             | React game platform           |      | [Link](/web/gameplatform/)             |
 | 4   | **luxurycar-react**      | React             | React landing page            |      | [Link](/web/luxurycar-react//)         |
