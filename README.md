@@ -23,6 +23,7 @@ monorepo/
     astroblogportfolio/
     beauty-salon/
     gameplatform/
+    gamestore/
     luxurycar-react/
   package.json
   pnpm-workspace.yaml
@@ -109,4 +110,5 @@ php -S localhost:8000
 |      4      | **astroblogportfolio** | Astro, TypeScript | Astro blog-portfolio template |      | [Link](/web/astroblogportfolio/) |
 |      5      |    **beauty-salon**    |        Vue        |     Vue Beauty Salon App      |      |    [Link](/web/beauty-salon/)    |
 |      6      |    **gameplatform**    |       React       |      React game platform      |      |    [Link](/web/gameplatform/)    |
+|      6      |     **gamestore**      |  Next, React, TS  |      Next Game Store App      |      |     [Link](/web/gamestore/)      |
 |      7      |  **luxurycar-react**   |       React       |      React landing page       |      |  [Link](/web/luxurycar-react//)  |
