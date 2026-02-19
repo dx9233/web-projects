@@ -1,3 +1,0 @@
-[build]
-  command = "turbo run build --filter frontend"
-  publish = "frontend/dist"
