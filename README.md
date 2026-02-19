@@ -12,7 +12,6 @@
 ```
 monorepo/
   backend/
-    beauty-salon-backend/
     laravel-app/
   mobile/
     carrent-app/
