@@ -4,18 +4,20 @@ import React from "react";
 import "./Footer.css";
 // import Subscribe from "./Subscribe";
 // import Links from "./Links";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
-
   return (
-     <footer className="footer">
+    <footer className="footer">
       <div className="container">
         <div className="footer__top">
           <div className="footer__brand">
-            <img
-              src="./assets/svg/footer_logo.svg"
+            <Image
+              src="/assets/svg/footer_logo.svg"
               className="footer__logo"
               alt="logo"
+              width={50}
+              height={50}
             />
 
             <p>

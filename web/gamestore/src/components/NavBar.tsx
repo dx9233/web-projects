@@ -63,7 +63,7 @@ const NavBar: React.FC = () => {
         </Link>
 
         <nav className={`nav ${isOpen ? "active" : ""}`}>
-            <Link href="/">Home</Link>
+          <Link href="/">Home</Link>
           <Link href="/store">Store</Link>
           <Link href="/services">Services</Link>
           <Link href="/news">News</Link>

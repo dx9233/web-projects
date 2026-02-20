@@ -1,4 +1,7 @@
 import Hero from "@/components/Hero";
+import NewsSection from "@/components/NewsSection";
+import Partners from "@/components/Partners";
+import Subscribe from "@/components/Subscribe";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function HeroPage() {
-  return <Hero />;
+  return (
+    <main>
+      <Hero />
+      <Partners />
+      <NewsSection />
+      <Subscribe />
+    </main>
+  );
 }

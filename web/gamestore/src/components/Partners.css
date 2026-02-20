@@ -1,0 +1,10 @@
+.partners {
+  padding: 40px 0;
+  background: white;
+}
+
+.partners .container {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.6;
+}
