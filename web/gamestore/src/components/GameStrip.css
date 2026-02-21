@@ -1,0 +1,21 @@
+/* Game Strip */
+
+.games-strip {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.games-strip img {
+  width: 267px;
+  height: 400px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+.games-strip img:hover {
+  transform: scale(1.05);
+}

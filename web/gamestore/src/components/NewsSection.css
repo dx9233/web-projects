@@ -7,33 +7,12 @@
   position: relative;
 }
 
-/* Game Strip */
-
-.games-strip {
-  display: flex;
-  justify-content: center;
-  overflow-x: auto;
-  gap: 10px;
-  padding: 10px 0;
-}
-
-.games-strip img {
-  width: 267px;
-  height: 400px;
-  border-radius: 8px;
-  flex-shrink: 0;
-  transition: 0.3s;
-}
-
-.games-strip img:hover {
-  transform: scale(1.05);
-}
-
 /* Cards */
 
 .section-title {
   text-align: center;
   font-size: 36px;
+  font-style: bold;
   color: #5f8cc7;
   margin-bottom: 10px;
 }
@@ -57,6 +36,7 @@
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
+  max-height: 500px;
 }
 
 .card::before {
@@ -103,6 +83,10 @@
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  width: 200;
+  height: 40px;
+  font-size: 14px;
+  font-style: bold;
 }
 
 .card-btn:hover {

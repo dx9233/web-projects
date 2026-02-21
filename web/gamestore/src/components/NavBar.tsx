@@ -1,83 +1,53 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import "./NavBar.css";
 
-const NavBar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Header = () => {
+  const pathname = usePathname();
 
-  const openMenu = () => setIsOpen(true);
-  const closeMenu = () => setIsOpen(false);
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/store", label: "Store" },
+    { href: "/services", label: "Services" },
+    { href: "/news", label: "News" },
+    { href: "/support", label: "Support" },
+    { href: "/contacts", label: "Contact" },
+  ];
 
   return (
-    <header>
-      <div className="navbar">
-        <button
-          className="burger"
-          aria-label="Open Menu"
-          onClick={openMenu}
-          style={{ display: isOpen ? "none" : undefined }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            viewBox="0 0 24 24"
-          >
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
-        </button>
-
-        <button
-          className="close"
-          aria-label="Close Menu"
-          onClick={closeMenu}
-          style={{ display: isOpen ? "flex" : "none" }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            viewBox="0 0 24 24"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
-
-        <Link href="/" className="logo">
-          GameStore
+    <header className="header">
+      <div className="container">
+        <Link href="/">
+          <Image
+            src="/assets/svg/logo.svg"
+            alt="logo"
+            width={196}
+            height={30}
+            priority
+          />
         </Link>
 
-        <nav className={`nav ${isOpen ? "active" : ""}`}>
-          <Link href="/">Home</Link>
-          <Link href="/store">Store</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/news">News</Link>
-          <Link href="/support">Support</Link>
-          <Link href="/contact">Contact</Link>
+        <nav className="nav">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={pathname === link.href ? "active" : ""}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
-      </div>
 
-      <div
-        className={`overlay ${isOpen ? "active" : ""}`}
-        onClick={closeMenu}
-      />
+        <Link href="/member" className="member-btn">
+          Member Area
+        </Link>
+      </div>
     </header>
   );
 };
 
-export default NavBar;
+export default Header;

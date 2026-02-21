@@ -2,12 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/getPosts";
 import "./NewsSection.css";
+import GameStrip from "./GameStrip";
 
 export default function NewsSection() {
   const posts = getAllPosts();
 
   return (
     <section className="news-section">
+      <GameStrip />
       <div className="container">
         <h2 className="section-title">Latest News</h2>
 
@@ -18,8 +20,8 @@ export default function NewsSection() {
                 <Image
                   src={post.image}
                   alt={post.title}
-                  width={250}
-                  height={100}
+                  width={480}
+                  height={280}
                 />
               </div>
 

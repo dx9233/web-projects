@@ -4,22 +4,24 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-type Params = {
-  params: {
+type Props = {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default async function NewsPost({ params }: Params) {
+export default async function NewsPost({ params }: Props) {
+  const { slug } = await params; 
+
   const filePath = path.join(
     process.cwd(),
     "content/news",
-    `${params.slug}.md`,
+    `${slug}.md`
   );
 
   const fileContent = fs.readFileSync(filePath, "utf-8");
 
-  const { content, data } = matter(fileContent);
+  const { content} = matter(fileContent);
 
   const processedContent = await remark().use(html).process(content);
 
@@ -27,8 +29,9 @@ export default async function NewsPost({ params }: Params) {
 
   return (
     <article style={{ padding: "40px" }}>
-      <h1>{data.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      <div className="container">
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        </div>
     </article>
   );
 }
