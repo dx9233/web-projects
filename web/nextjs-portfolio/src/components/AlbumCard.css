@@ -1,0 +1,128 @@
+.album-card {
+  background: #1a1a1a;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 310px;
+  height: 380px;
+  transition: transform 0.3s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+}
+
+.album-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.album-card .info {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.album-card .info p {
+  font-weight: bold;
+  color: white;
+}
+
+.album-card .info span {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.album-card .actions {
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.album-card .actions a {
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.album-card .actions a:hover {
+  color: #007bff;
+}
+
+.albums-section .container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.album-card .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .album-card {
+    width: 280px;
+    height: 350px;
+  }
+
+  .album-card .info p {
+    font-size: 1rem;
+  }
+
+  .album-card .info span {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .albums-section .container {
+    gap: 20px;
+  }
+
+  .album-card {
+    width: 45%;
+    height: auto;
+  }
+
+  .album-card .info {
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+
+  .album-card .info p {
+    font-size: 0.95rem;
+  }
+
+  .album-card .info span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .album-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .album-card .info {
+    margin-left: 6px;
+    margin-top: 6px;
+  }
+
+  .album-card .info p {
+    font-size: 0.9rem;
+  }
+
+  .album-card .info span {
+    font-size: 0.75rem;
+  }
+
+  .album-card .actions a {
+    font-size: 1rem;
+  }
+}

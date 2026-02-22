@@ -22,6 +22,7 @@ monorepo/
     beauty-salon/
     gamestore/
     luxurycar-react/
+    nextjs-portfolio/
   package.json
   pnpm-workspace.yaml
   turbo.json
@@ -96,13 +97,14 @@ php -S localhost:8000
 
 ## Projects
 
-|             |      Projects       |       Stack       |     Discription      | Demo |             Folder             |
-| :---------: | :-----------------: | :---------------: | :------------------: | :--: | :----------------------------: |
-| **Backend** |                     |                   |                      |      |                                |
-|      1      |   **laravel-app**   | PHP, SQL, Laravel | Backend Laravel app  |      | [Link](/backend/laravel-app/)  |
-| **Mobile**  |                     |                   |                      |      |                                |
-|      2      |   **carrent-app**   | React Native, TS  |     Car Rent App     |      |  [Link](/mobile/carrent-app/)  |
-|   **Web**   |                     |                   |                      |      |                                |
-|      3      |  **beauty-salon**   |        Vue        | Vue Beauty Salon App |      |   [Link](/web/beauty-salon/)   |
-|      4      |    **gamestore**    |  Next, React, TS  | Next Game Store App  |      |    [Link](/web/gamestore/)     |
-|      5      | **luxurycar-react** |       React       |  React landing page  |      | [Link](/web/luxurycar-react//) |
+|             |       Projects       |       Stack       |     Discription      | Demo |             Folder             |
+| :---------: | :------------------: | :---------------: | :------------------: | :--: | :----------------------------: |
+| **Backend** |                      |                   |                      |      |                                |
+|      1      |   **laravel-app**    | PHP, SQL, Laravel | Backend Laravel app  |      | [Link](/backend/laravel-app/)  |
+| **Mobile**  |                      |                   |                      |      |                                |
+|      2      |   **carrent-app**    | React Native, TS  |     Car Rent App     |      |  [Link](/mobile/carrent-app/)  |
+|   **Web**   |                      |                   |                      |      |                                |
+|      3      |   **beauty-salon**   |        Vue        | Vue Beauty Salon App |      |   [Link](/web/beauty-salon/)   |
+|      4      |    **gamestore**     |  Next, React, TS  | Next Game Store App  |      |    [Link](/web/gamestore/)     |
+|      5      | **luxurycar-react**  |       React       |  React landing page  |      | [Link](/web/luxurycar-react/)  |
+|      6      | **nextjs-portfolio** |  Next, React, TS  | Main Next Portfolio  |      | [Link](/web/nextjs-portfolio/) |
