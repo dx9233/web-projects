@@ -1,0 +1,314 @@
+{
+  "ru": {
+    "meta": {
+      "title": "Главная | Dmitry Lean",
+      "author": "Dmitry Lean"
+    },
+    "menu": [
+      {
+        "href": "/ru/",
+        "text": "Главная"
+      },
+      {
+        "href": "/ru/Portfolio",
+        "text": "Проекты"
+      },
+      {
+        "href": "/ru/Blog",
+        "text": "Блог"
+      },
+      {
+        "href": "/ru/Contact",
+        "text": "Контакты"
+      },
+      {
+        "href": "/en/",
+        "text": "EN"
+      }
+    ],
+    "labels": {
+      "blog": "Блог"
+    },
+    "categories": {
+      "ai": "Искусственный интеллект",
+      "development": "Разработка",
+      "psychology": "Психология",
+      "videogames": "Видеоигры",
+      "job": "Работа",
+      "devnotes": "Заметки"
+    },
+    "aboutData": {
+      "title": "Привет, я - Дмитрий",
+      "subtitle": "Software Developer",
+      "stack": ["Fullstack"],
+      "contactLink": {
+        "href": "/ru/Contact",
+        "text": "Связаться со мной"
+      },
+      "projectLink": {
+        "href": "/ru/Portfolio",
+        "text": "Проекты"
+      }
+    },
+    "skillsData": {
+      "title": "Skills",
+      "skills": [
+        {
+          "name": "HTML",
+          "icon": "../assets/svg/html5.svg"
+        },
+        {
+          "name": "CSS",
+          "icon": "../assets/svg/css3.svg"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "../assets/svg/JS.svg"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "../assets/svg/typescript-logo-svgrepo-com.svg"
+        },
+        {
+          "name": "React",
+          "icon": "../assets/svg/React.svg"
+        },
+        {
+          "name": "Astro",
+          "icon": "../assets/svg/astro-svgrepo-com.svg"
+        },
+        {
+          "name": "Svelte",
+          "icon": "../assets/svg/svelte-svgrepo-com.svg"
+        },
+        {
+          "name": "Python",
+          "icon": "../assets/svg/python.svg"
+        },
+        {
+          "name": "PHP",
+          "icon": "../assets/svg/php.svg"
+        },
+        {
+          "name": "Git",
+          "icon": "../assets/svg/git-icon-logo-svgrepo-com.svg"
+        },
+        {
+          "name": "Webpack",
+          "icon": "../assets/svg/webpack-svgrepo-com.svg"
+        },
+        {
+          "name": "Vite",
+          "icon": "../assets/svg/vite-svgrepo-com.svg"
+        },
+        {
+          "name": "WordPress",
+          "icon": "../assets/svg/wordpress.svg"
+        },
+        {
+          "name": "Tilda",
+          "icon": "../assets/svg/tilda.svg"
+        },
+        {
+          "name": "Illustrator",
+          "icon": "../assets/svg/adobe-illustrator-svgrepo-com.svg"
+        },
+        {
+          "name": "Photoshop",
+          "icon": "../assets/svg/adobe-photoshop-svgrepo-com.svg"
+        },
+        {
+          "name": "Premiere",
+          "icon": "../assets/svg/adobe-premiere-svgrepo-com.svg"
+        },
+        {
+          "name": "ChatGPT",
+          "icon": "../assets/svg/chatgpt.svg"
+        }
+      ]
+    },
+    "footer": {
+      "author": "Dmitry Lean",
+      "rights": "Все права защищены.",
+      "legalLinks": [
+        {
+          "href": "/ru/Terms",
+          "text": "Пользовательское соглашение"
+        },
+        {
+          "href": "/ru/Privacy",
+          "text": "Политика конфиденциальности"
+        }
+      ],
+      "socialLinks": [
+        {
+          "href": "https://github.com/dmitrylean",
+          "icon": "fab fa-github"
+        },
+        {
+          "href": "https://t.me/dg404_bot",
+          "icon": "fa-brands fa-telegram"
+        },
+        {
+          "href": "https://www.behance.net/adamlean92",
+          "icon": "fab fa-behance"
+        }
+      ]
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Home | Dmitry Lean",
+      "author": "Dmitry Lean"
+    },
+    "menu": [
+      {
+        "href": "/en/",
+        "text": "Home"
+      },
+      {
+        "href": "/en/Portfolio",
+        "text": "Projects"
+      },
+      {
+        "href": "/en/Blog",
+        "text": "Blog"
+      },
+      {
+        "href": "/en/Contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/ru/",
+        "text": "RU"
+      }
+    ],
+    "labels": {
+      "blog": "Blog"
+    },
+    "categories": {
+      "astro": "Astro",
+      "frontend": "Frontend",
+      "design": "Design",
+      "personal": "Personal"
+    },
+    "aboutData": {
+      "title": "Hi, I'm Dmitry",
+      "subtitle": "Software developer",
+      "stack": ["Fullstack"],
+      "contactLink": {
+        "href": "/en/Contact",
+        "text": "Contact me"
+      },
+      "projectLink": {
+        "href": "/en/Portfolio",
+        "text": "Projects"
+      }
+    },
+    "skillsData": {
+      "title": "Skills",
+      "skills": [
+        {
+          "name": "HTML",
+          "icon": "../assets/svg/html5.svg"
+        },
+        {
+          "name": "CSS",
+          "icon": "../assets/svg/css3.svg"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "../assets/svg/JS.svg"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "../assets/svg/typescript-logo-svgrepo-com.svg"
+        },
+        {
+          "name": "React",
+          "icon": "../assets/svg/React.svg"
+        },
+        {
+          "name": "Astro",
+          "icon": "../assets/svg/astro-svgrepo-com.svg"
+        },
+        {
+          "name": "Svelte",
+          "icon": "../assets/svg/svelte-svgrepo-com.svg"
+        },
+        {
+          "name": "Python",
+          "icon": "../assets/svg/python.svg"
+        },
+        {
+          "name": "PHP",
+          "icon": "../assets/svg/php.svg"
+        },
+        {
+          "name": "Git",
+          "icon": "../assets/svg/git-icon-logo-svgrepo-com.svg"
+        },
+        {
+          "name": "Webpack",
+          "icon": "../assets/svg/webpack-svgrepo-com.svg"
+        },
+        {
+          "name": "Vite",
+          "icon": "../assets/svg/vite-svgrepo-com.svg"
+        },
+        {
+          "name": "WordPress",
+          "icon": "../assets/svg/wordpress.svg"
+        },
+        {
+          "name": "Tilda",
+          "icon": "../assets/svg/tilda.svg"
+        },
+        {
+          "name": "Illustrator",
+          "icon": "../assets/svg/adobe-illustrator-svgrepo-com.svg"
+        },
+        {
+          "name": "Photoshop",
+          "icon": "../assets/svg/adobe-photoshop-svgrepo-com.svg"
+        },
+        {
+          "name": "Premiere",
+          "icon": "../assets/svg/adobe-premiere-svgrepo-com.svg"
+        },
+        {
+          "name": "ChatGPT",
+          "icon": "../assets/svg/chatgpt.svg"
+        }
+      ]
+    },
+    "footer": {
+      "author": "Dmitry Lean",
+      "rights": "All rights reserved.",
+      "legalLinks": [
+        {
+          "href": "/en/Terms",
+          "text": "Terms of Service"
+        },
+        {
+          "href": "/en/Privacy",
+          "text": "Privacy Policy"
+        }
+      ],
+      "socialLinks": [
+        {
+          "href": "https://github.com/dmitrylean",
+          "icon": "fab fa-github"
+        },
+        {
+          "href": "https://t.me/dg404_bot",
+          "icon": "fa-brands fa-telegram"
+        },
+        {
+          "href": "https://www.behance.net/adamlean92",
+          "icon": "fab fa-behance"
+        }
+      ]
+    }
+  }
+}

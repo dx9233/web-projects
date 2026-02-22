@@ -1,0 +1,29 @@
+{
+  "name": "mainportfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --port 4320",
+    "build": "astro build",
+    "preview": "astro preview --port 4325",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/markdown-component": "^1.0.5",
+    "@astrojs/mdx": "^4.3.6",
+    "@astrojs/react": "^4.4.0",
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "@fortawesome/fontawesome-svg-core": "^7.0.1",
+    "@fortawesome/free-brands-svg-icons": "^7.0.1",
+    "@fortawesome/free-solid-svg-icons": "^7.0.1",
+    "@fortawesome/react-fontawesome": "^3.0.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "astro": "^5.12.9",
+    "framer-motion": "^12.23.22",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-player": "^3.3.3",
+    "react-router-dom": "^7.8.2"
+  }
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "category": "astro",
+    "img": "/assets/img/portfolio/astroblogportfolio.jpg",
+    "title": "Astro Blog + Portfolio",
+    "detailsTitle": "Тема Astro",
+    "description": "Шаблон портфолио с функцией блога на Astro",
+    "stack": "Astro",
+    "demo": "https://astroblogportfolio.netlify.app/",
+    "github": "https://github.com/dmitrylean/astroblogportfolio",
+    "icons": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+    ]
+  },
+  {
+    "category": "astro",
+    "img": "/assets/img/portfolio/astroblog.jpg",
+    "title": "Astro Blog",
+    "detailsTitle": "Тема Astro",
+    "description": "Шаблон Astro-блога",
+    "stack": "Astro",
+    "demo": "https://astro-blogdev.netlify.app/",
+    "github": "https://github.com/dmitrylean/astro-blog",
+    "icons": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+    ]
+  },
+  {
+    "category": "react",
+    "img": "/assets/img/portfolio/creativeartist.jpg",
+    "title": "Creative Artist Template",
+    "detailsTitle": "Template for creative professions",
+    "description": "Шаблон на React/Node для творческих профессий.",
+    "stack": "React",
+    "demo": "https://nextjs-for-creative.netlify.app",
+    "github": "https://github.com/dmitrylean/creative-template-nextjs",
+    "icons": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+    ]
+  },
+  {
+    "category": "react",
+    "img": "/assets/img/portfolio/strikethehub.jpg",
+    "title": "Strike The Hub",
+    "detailsTitle": "Strike The Hub",
+    "description": "Геймерский портал, посвященный шутерам",
+    "stack": "React",
+    "demo": "https://strikethehub.netlify.app",
+    "github": "https://github.com/dmitrylean/strikethehub",
+    "icons": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+    ]
+  },
+  {
+    "category": "astro",
+    "img": "/assets/img/portfolio/html-projects.jpg",
+    "title": "Crash The Routines",
+    "detailsTitle": "Crash The Routines",
+    "description": "Фронтенд-проекты, кодовая база, библиотека, шаблоны и документация",
+    "stack": "Astro",
+    "demo": "https://crashtheroutines.netlify.app/",
+    "github": "https://github.com/dmitrylean/frontend-basis-projects",
+    "icons": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    ]
+  },
+  {
+    "category": "react",
+    "img": "/assets/img/portfolio/reactadmin.jpg",
+    "title": "React Admin",
+    "detailsTitle": "React Admin",
+    "description": "Админ панель на React.",
+    "stack": "React",
+    "demo": "https://react-admin10.netlify.app/",
+    "github": "https://github.com/dmitrylean/react-dashboard",
+    "icons": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+    ]
+  },
+  {
+    "category": "wordpress",
+    "img": "/assets/img/portfolio/delotebeauty.jpg",
+    "title": "WP Projects",
+    "detailsTitle": "WP Projects",
+    "description": "Мини-темы для Wordpress.",
+    "stack": "Wordpress",
+    "github": "https://github.com/dmitrylean/wp-projects",
+    "icons": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
+    ]
+  }
+]

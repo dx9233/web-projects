@@ -1,0 +1,92 @@
+---
+title: "Темная тема"
+image: "/assets/img/darktheme.jpg"
+---
+
+## HTML
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Темная тема</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="theme-toggle">Переключить тему</button>
+
+    <h1>Привет, мир!</h1>
+    <p>Это пример сайта с тёмной темой.</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+## CSS
+
+```css
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+}
+
+button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+}
+```
+
+## JS
+
+```javascript
+const toggleBtn = document.getElementById("theme-toggle");
+
+// Переключатель темы
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+
+  if (document.body.classList.contains("dark-theme")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// Сохранить выбор пользователя
+
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+}
+
+window.onload = () => {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-theme");
+  }
+};
+```

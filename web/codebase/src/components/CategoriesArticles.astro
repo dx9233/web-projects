@@ -1,0 +1,95 @@
+---
+import { getCollection } from "astro:content";
+
+const articles = await getCollection("articles");
+
+// collect unique categories
+const categories = [...new Set(articles.map((p) => p.data.category))];
+---
+
+<section class="categories">
+  <div class="container">
+    <h4>Категории</h4>
+    <ul>
+      {
+        categories.map((category) => (
+          <li>
+            <a href={`/category/${category}`}>{category}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .categories h4 {
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .categories ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  li,
+  li a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  li a:hover {
+    color: blue;
+  }
+  @media (max-width: 600px) {
+    .categories h4 {
+      font-size: 20px;
+      justify-content: center;
+    }
+
+    .categories ul {
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    li a {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .categories h4 {
+      font-size: 22px;
+    }
+
+    .categories ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    li a {
+      font-size: 19px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .categories h4 {
+      font-size: 26px;
+    }
+
+    li a {
+      font-size: 20px;
+    }
+  }
+</style>

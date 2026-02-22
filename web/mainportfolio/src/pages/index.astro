@@ -1,0 +1,47 @@
+---
+
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script is:inline>
+      // Redirect user based on saved or browser language
+      (function () {
+        const savedLang = localStorage.getItem("lang");
+
+        // Function to redirect based on language
+        function redirectToLang(lang) {
+          localStorage.setItem("lang", lang);
+          if (lang === "en" && !location.pathname.startsWith("/en")) {
+            window.location.replace("/en/");
+          }
+          if (lang === "ru" && !location.pathname.startsWith("/ru")) {
+            window.location.replace("/ru/");
+          }
+        }
+
+        // Expose function globally for manual switching
+        window.setLanguage = redirectToLang;
+
+        if (!savedLang) {
+          const browserLang = navigator.language.split("-")[0];
+          if (browserLang === "en") {
+            redirectToLang("en");
+          } else {
+            redirectToLang("ru"); // default is Russian
+          }
+        } else {
+          redirectToLang(savedLang);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+    <!-- Example: language switch buttons -->
+    <button onclick="setLanguage('ru')">Ru</button>
+    <button onclick="setLanguage('en')">En</button>
+  </body>
+</html>

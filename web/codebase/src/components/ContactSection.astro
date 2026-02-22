@@ -1,0 +1,145 @@
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-form">
+        <h2>Написать мне</h2>
+
+        <form>
+          <label>Имя</label>
+          <input type="text" placeholder="Напишите ваше имя" required />
+
+          <label>EMail</label>
+          <input type="email" placeholder="Ваш EMail" required />
+
+          <label>Сообщение</label>
+          <textarea
+            placeholder="Опишите свою проблему или задайте ваш вопрос"
+            required></textarea>
+
+          <button type="submit" class="btn-submit">
+            Отправить Сообщение →
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <div class="info-title">
+          <h2>Информация</h2>
+        </div>
+        <div class="info-text">
+          <p>
+            <strong class="red-text">Email:</strong> crashtheroutines@gmail.com
+          </p>
+        </div>
+        <div class="info-text">
+          <p>
+            У меня нет аккаунтов в соцсетях, я не хочу публичности. Поэтому,
+            связаться со мной вы можете только благодаря EMail или в TG.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+
+  .contact-form,
+  .contact-info {
+    flex: 1 1 45%;
+    min-width: 300px;
+    gap: 5px;
+  }
+
+  .info-title .red-text {
+    margin-top: 10px;
+  }
+
+  .info-text p {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, orange, red);
+  }
+
+  .red-text {
+    color: #ff3333;
+  }
+
+  form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #1a1a1a;
+    color: #fff;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  .btn-submit {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #2e8791;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn-submit:hover {
+    opacity: 0.8;
+    color: black;
+    background: white;
+    border: 2px solid black;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 2fr;
+      height: auto;
+      padding: 5px 10px;
+      align-items: center;
+      border: 2px solid black;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

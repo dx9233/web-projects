@@ -1,0 +1,94 @@
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <span class="logo-symbol">Ω</span>
+    </div>
+
+    <div class="footer-column">
+      <h3>Контакты</h3>
+      <p>+7 (812) 123-45-67</p>
+      <p>+7 (911) 123-45-67</p>
+      <p>Новоостровский проспект, дом 36 лит. С</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Режим работы</h3>
+      <p>С 10:00 до 21:00 (Пн-Пт)</p>
+      <p>С 11:00 до 20:00 (Сб-Вс)</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Мы в Instagram</h3>
+      <a href="#" class="social-link">
+        <img src="#" alt="Instagram" />
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2017 - 2022</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: #111;
+    color: #ddd;
+    padding: 2rem 1rem 1rem;
+    font-family: "Georgia", serif;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 колонки */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-symbol {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .footer-column h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 0.95rem;
+    margin: 0.4rem 0;
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  .footer-column a:hover {
+    color: #fff;
+  }
+
+  .social-link img {
+    width: 24px;
+    height: 24px;
+    filter: invert(80%);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 1rem 0 0;
+    font-size: 0.85rem;
+    color: #999;
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import BlogSection from "../components/BlogSection.astro";
+import WorksSection from "../components/WorksSection.astro";
+import { getCollection } from "astro:content";
+
+let posts = await getCollection("blog");
+let works = await getCollection("works");
+
+posts = posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+works = works.sort((a, b) => b.data.year - a.data.year);
+
+posts = posts.slice(0, 2);
+works = works.slice(0, 3);
+---
+
+<Layout>
+  <Header />
+  <Hero />
+  <BlogSection posts={posts} />
+  <WorksSection works={works} />
+  <Footer />
+</Layout>

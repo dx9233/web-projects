@@ -1,0 +1,62 @@
+/* Light theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #0077ff;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-color: #0f0f0f;
+  --text-color: #e0e0e0;
+  --accent-color: #ff6600;
+}
+
+/* Neon / Cyberpunk theme */
+[data-theme="neon"] {
+  --bg-color: #0a0a0f;
+  --text-color: #39ff14; /* acid green */
+  --accent-color: #ff00ff; /* magenta */
+
+  --glow-color: #39ff14;
+  --glow-accent: #ff00ff;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition:
+    color 0.4s ease,
+    text-shadow 0.4s ease;
+}
+
+/* Neon glow эффект */
+[data-theme="neon"] a {
+  text-shadow:
+    0 0 5px var(--glow-accent),
+    0 0 15px var(--glow-accent),
+    0 0 25px var(--glow-accent),
+    0 0 40px var(--glow-accent);
+}
+
+[data-theme="neon"] body {
+  text-shadow:
+    0 0 5px var(--glow-color),
+    0 0 15px var(--glow-color);
+}
+
+/* Кнопка переключателя тем */
+[data-theme="neon"] button {
+  color: var(--accent-color);
+  border-color: var(--glow-accent);
+  box-shadow:
+    0 0 10px var(--glow-accent),
+    0 0 20px var(--glow-accent);
+}
+
+[data-theme="neon"] button:hover {
+  background: var(--glow-accent);
+  color: #0a0a0f;
+  text-shadow: none;
+}

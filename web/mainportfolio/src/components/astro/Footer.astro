@@ -1,0 +1,53 @@
+---
+interface SocialLink {
+  href: string;
+  icon: string;
+}
+
+interface LegalLink {
+  text: string;
+  href: string;
+}
+
+const {
+  socialLinks = [],
+  year = new Date().getFullYear(),
+  author,
+  rights,
+  legalLinks = [],
+} = Astro.props as {
+  socialLinks?: SocialLink[];
+  year?: number;
+  author: string;
+  rights: string;
+  legalLinks?: LegalLink[];
+};
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="social-icons">
+      {
+        socialLinks.length > 0 &&
+          socialLinks.map((link) => (
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              <i class={link.icon} />
+            </a>
+          ))
+      }
+    </div>
+
+    <p>&copy; {year} {author}. {rights}</p>
+
+    <div class="legal-links">
+      {
+        legalLinks.length > 0 &&
+          legalLinks.map((link) => (
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.text}
+            </a>
+          ))
+      }
+    </div>
+  </div>
+</footer>

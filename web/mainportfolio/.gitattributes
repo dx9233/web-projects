@@ -1,0 +1,6 @@
+*.astro linguist-detectable=true
+*.mdx linguist-detectable=true
+*.css linguist-detectable=false
+*.html linguist-detectable=false
+*.php linguist-detectable=false
+*.py linguist-detectable=false

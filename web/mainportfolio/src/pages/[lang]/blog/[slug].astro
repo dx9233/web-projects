@@ -1,0 +1,43 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import type { GetStaticPaths } from "astro";
+
+type Lang = "ru" | "en";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const allPosts = await getCollection("blog");
+  return allPosts.map((post) => {
+    const [lang, slug] = post.slug.split("/");
+    return { params: { lang: lang as Lang, slug } };
+  });
+};
+
+const params = Astro.params as { lang: Lang; slug: string };
+const lang = params.lang;
+const slug = params.slug;
+
+const allPosts = await getCollection("blog");
+const post = allPosts.find((p) => p.slug === `${lang}/${slug}`);
+if (!post) throw new Error("Post not found");
+
+const { Content } = await post.render();
+---
+
+<Layout title={`${post.data.title} | Dmitry Lean`}>
+  <main class="content">
+    <article class="article-container">
+      <h1>{post.data.title}</h1>
+      <p>
+        <em>
+          {
+            post.data.date instanceof Date
+              ? post.data.date.toLocaleDateString(lang)
+              : post.data.date
+          }
+        </em>
+      </p>
+      <Content />
+    </article>
+  </main>
+</Layout>

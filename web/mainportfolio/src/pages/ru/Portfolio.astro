@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageToggle from "../../components/react/PageToggle";
+import lang from "../../data/lang.json";
+import Works from "../../components/react/WorksSection";
+
+const currentLang = "ru";
+
+const locale = currentLang;
+const t = lang[locale];
+---
+
+<Layout title="Проекты | Dmitry Lean">
+  <main class="content">
+    <div class="conteiner">
+      <Works client:load />
+    </div>
+  </main>
+
+  <style>
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-style: bold;
+      font-weight: 700;
+
+      text-align: center;
+      justify-content: center;
+    }
+  </style>
+</Layout>

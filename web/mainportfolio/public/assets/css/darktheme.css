@@ -1,0 +1,193 @@
+/* dark theme */
+html.dark body {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+html.dark .content {
+  color: white;
+}
+
+/* btn */
+.theme-btn {
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+html.dark .theme-btn {
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+html.dark .nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+html.dark .nav a:hover {
+  color: red;
+}
+
+html.dark .social-icons a {
+  color: white;
+}
+
+html.dark .social-icons a:hover {
+  color: red;
+}
+
+html.dark .legal-links,
+html.dark .legal-links a {
+  color: white;
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark p,
+html.dark a {
+  color: white;
+}
+
+html.dark .theme-btn {
+  background: black;
+  color: white;
+}
+
+html.dark .projects {
+  color: white;
+}
+
+html.dark .project-card,
+html.dark .album-card {
+  background: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(248, 248, 248, 0.5);
+  transition: transform 0.3s ease;
+}
+
+html.dark .icon {
+  color: white;
+}
+
+html.dark .icon:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+html.dark .filter-btn {
+  border: 2px solid white;
+  color: white;
+}
+
+html.dark .tab-btn {
+  color: white;
+}
+
+html.dark .project-links a {
+  color: white;
+}
+
+html.dark .project-links a:hover {
+  color: red;
+}
+
+html.dark .track-info .title {
+  color: white;
+}
+
+html.dark .track-info .author {
+  color: white;
+}
+
+html.dark .tracklist-title {
+  color: white;
+}
+
+html.dark .track-info .author {
+  color: white;
+}
+
+html.dark .tracklist-title {
+  color: white;
+}
+
+html.dark .tab {
+  border: 2px solid white;
+  color: white;
+}
+
+html.dark .categories-list a:hover {
+  color: white;
+  background: red;
+}
+
+html.dark .article-container a {
+  color: white;
+  text-decoration: underline;
+}
+
+html.dark .post-title a {
+  color: white;
+}
+
+html.dark .post-title a:hover {
+  color: red;
+}
+
+html.dark .post-meta {
+  color: white;
+}
+
+html.dark .filter-btn:hover {
+  background: red;
+  color: #fff;
+}
+
+html.dark .filter-active {
+  background: red;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+html.dark .value {
+  color: #fff;
+}
+
+html.dark .album-card .info span,
+html.dark .album-card .info p,
+html.dark .album-card .actions a {
+  color: #fff;
+}
+
+html.dark .album-card .actions a:hover {
+  color: red;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  html.dark .burger {
+    display: flex;
+    color: white;
+    background: black;
+  }
+
+  /* ==== NAV ==== */
+  html.dark .nav {
+    background: black;
+  }
+
+  html.dark .nav a {
+    color: white;
+  }
+
+  html.dark .nav a:hover {
+    color: red;
+  }
+}

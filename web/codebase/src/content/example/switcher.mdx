@@ -1,0 +1,101 @@
+---
+title: "Свитчер"
+image: "/assets/img/darktheme.jpg"
+---
+
+## Код
+
+```html
+     <section class="section" id="projects">
+       <div class="container" class="project-section active">
+         <div class="switcher">
+           <a
+             href="index.html"
+             onclick="showInactive(); return false;"
+             class="switch switch--green"
+             class="green"
+             >Active</a
+           >
+           <a
+             href="pages/projects.html"
+             onclick="showActive(); return false;"
+             class="switch switch--red";
+             class="red"
+             >No Active</a
+           >
+         </div>
+
+         <div id="active-projects" class="cards">
+           <div class="card">
+             <h1>Card 1</h1>
+             <p>Lorem Ipsum</p>
+           </div>
+         </div>
+       </div>
+     </section>
+
+       <section class="section">
+       <header class="header">
+         <div class="container">
+           <nav class="nav">
+             <ul class="nav_menu"></ul>
+           </nav>
+
+           <div class="switcher">
+             <a
+               href="../index.html"
+               onclick="showInactive(); return false;"
+               class="switch"
+               >Home</a
+             >
+           </div>
+           <div id="inactive-projects" div class="cards">
+
+             <div class="card">
+               <h1><a href="winterlord.html">Card 1</a></h1>
+               <p>
+                 Lorem Ipsum
+               </p>
+             </div>
+
+             <div class="card">
+             <h1>Card 2</h1>
+             <p>
+               Lorem Ipsum.
+             </p>
+           </div>
+
+           <div class="card">
+             <h1>Card 3</h1>
+             <p>Lorem Ipsum</p>
+           </div>
+
+             <div class="card">
+               <h1>Card 4</h1>
+               <p>Lorem Ipsum</p>
+             </div>
+
+             <div class="card">
+             <h1>Card 5</h1>
+             <p>Lorem Ipsum.</p>
+           </div>
+
+           <div class="card">
+               <h1><a href="fext.html">Card 6</a></h1>
+               <p>Lorem Ipsum.</p>
+             </div>
+           </div>
+           </section>
+
+   <script>
+ function showActive() {
+   document.getElementById('active-projects').style.display = 'block';
+   document.getElementById('inactive-projects').style.display = 'none';
+ }
+
+ function showInactive() {
+   document.getElementById('active-projects').style.display = 'none';
+   document.getElementById('inactive-projects').style.display = 'block';
+ }
+</script>
+```

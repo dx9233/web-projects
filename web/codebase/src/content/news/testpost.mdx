@@ -1,0 +1,359 @@
+---
+title: "Test Post"
+description: "description"
+category: "test"
+pubDate: 2022-08-20
+---
+
+# 1) `TypeError: Missing parameter: categories` (manifest/generator)
+
+**Симптом:** при заходе в пост или в категорию — ошибка из `manifest/generator`.
+
+**Причина:** Имя динамического параметра в пути файла не совпадает с тем, что возвращается `getStaticPaths` / или вы назвали файл `[categories].astro`, а в коде используете `params.category` (или наоборот).
+
+**Объяснение:** Astro генерирует маршруты из структуры файлов: если файл называется `[category].astro`, то при сборке оно ожидает, что `getStaticPaths` вернёт `params` с ключом `category`. Если файл — `[categories].astro`, а ты возвращаешь `category`, или не возвращаешь вовсе — manifest ругается.
+
+**Фикс:**
+
+- Убедись, что имя файла совпадает с параметром: `src/pages/[lang]/category/[category].astro`.
+- В `getStaticPaths` возвращай объекты вида `{ params: { lang, category } }`.
+
+**Профилактика:** Всегда единообразно — файл `[...]` ↔ ключ в `params`.
+
+---
+
+# 2) TypeScript: `t.categories[cat] ?? cat` — TS ругается
+
+**Симптом:** TS жалуется, что `t.categories` может быть `undefined` или индекс не соответствует типу.
+
+**Причина:** Тип `langData`/`t` не гарантирует наличие поля `categories` или конкретного ключа. TS строг.
+
+**Объяснение (TS):** Индексация `obj[key]` требует, чтобы тип `obj` либо имел индексный сигнатур (`Record<string,string>`), либо вы явно указали, что значение может быть `undefined` и обработали это.
+
+**Фиксы (примеры):**
+
+1. Optional chaining (самый простой):
+
+```astro
+{t.categories?.[cat] ?? cat}
+```
+
+2. Helper:
+
+```ts
+const getCategoryLabel = (k: string) => (t.categories?.[k] ?? k);
+...
+{getCategoryLabel(cat)}
+```
+
+3. Приведение типов, если ты уверен(а):
+
+```ts
+{
+  (t.categories as Record<string, string>)[cat] ?? cat;
+}
+```
+
+**Профилактика:** Опиши `lang.json` типом, или используйте helper, который дефолтит.
+
+---
+
+# 3) `satisfies GetStaticPaths` → Type errors
+
+**Симптом:** `Type 'Promise<...>' is not assignable to type 'GetStaticPaths'` или похожие ошибки.
+
+**Причина:** Неправильное применение `satisfies` либо неверная аннотация возвращаемого типа. `satisfies` — проверяет выражение, а не функцию/Promise в данном контексте. Astro ожидает, что `export const getStaticPaths: GetStaticPaths = async () => { ... }`.
+
+**Объяснение (TS):** `GetStaticPaths` — тип функции (ее сигнатуры). Нельзя «satisfies» на массиве; аннотируй функцию как `: GetStaticPaths`.
+
+**Фикс:**
+
+```ts
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // return array of { params: {...} }
+};
+```
+
+**Профилактика:** Используй явную аннотацию `: GetStaticPaths`.
+
+---
+
+# 4) `ReferenceError: extractCategories is not defined` (или «not visible»)
+
+**Симптом:** Ошибка при вызове `extractCategories` внутри `getStaticPaths`.
+
+**Причина:** Функция определена ниже `getStaticPaths` в том же `.astro` файле, либо у тебя конфликт имен (импорт + локальная декларация), либо некорректный импорт (путь).
+
+**Объяснение (JS/Node):** В `.astro` файле порядок имеет значение — при трансформации `getStaticPaths` может исполняться до локальных деклараций. Также если ты импортируешь и потом локально объявляешь то же имя — TS/Node ругаются.
+
+**Фиксы:**
+
+- Вынеси `extractCategories` в отдельный модуль `src/utils/content.ts` и **импортируй** его:
+
+```ts
+// src/utils/content.ts
+import type { CollectionEntry } from "astro:content";
+export function extractCategories(p: CollectionEntry<"blog">): string[] {
+  const c = (p.data as any)?.categories;
+  if (!c) return [];
+  if (Array.isArray(c)) return c.map(String);
+  if (typeof c === "string") return [c];
+  return [];
+}
+```
+
+- В `.astro`:
+
+```ts
+import { extractCategories } from "../../../utils/content";
+```
+
+- Убедись, что **нет локальной функции с тем же именем** (удалить дубли).
+
+**Профилактика:** общий util + не дублировать имена.
+
+---
+
+# 5) `Import declaration conflicts with local declaration of 'extractCategories'`
+
+**Симптом:** TS говорит: импорт конфликтует с локальной функцией.
+
+**Причина:** Ты одновременно импортируешь `extractCategories` и объявляешь `function extractCategories` в том же файле.
+
+**Фикс:** Убери локальное определение или переименуй импорт:
+
+```ts
+import { extractCategories as extractCategoriesUtil } from "../../../utils/content";
+```
+
+и используй `extractCategoriesUtil(...)`.
+
+**Профилактика:** один источник правды — util.
+
+---
+
+# 6) `getStaticPaths` возвращает `props` с `CollectionEntry` → типы/серилизация/память
+
+**Симптом:** TypeScript/ASTRO ругается на возвращаемое значение, или маршруты не работают, или heavy memory.
+
+**Причина:** Ты возвращал в `getStaticPaths` целые `CollectionEntry` объекты в `props`. Эти объекты включают методы, не сериализуемы, занимают память и не нужны на этапе сборки.
+
+**Объяснение:** Astro ожидает, что `getStaticPaths` возвращает массив объектов `{ params: {...} }` и (опционально) легкие `props` (строки, числа), но лучше возвращать только `params`, а данные подгружать в runtime на странице.
+
+**Фикс:** возвращай только `params` из `getStaticPaths`:
+
+```ts
+return paths; // где paths = [{ params: { lang, category } }, ...]
+```
+
+А на странице делай:
+
+```ts
+const params = Astro.params;
+const allPosts = await getCollection("blog");
+const posts = allPosts.filter(
+  (p) =>
+    p.slug.startsWith(`${params.lang}/`) &&
+    extractCategories(p).includes(params.category),
+);
+```
+
+**Профилактика:** `getStaticPaths` = генерация URL; не кладём туда большие объекты.
+
+---
+
+# 7) 404 при открытии поста / некорректные ссылки
+
+**Симптом:** Пост открывается из категории, но не со страницы «Blog», или наоборот — 404 при переходе.
+
+**Причины:**
+
+- Ссылка формируется как `/${lang}/${slug}` вместо `/${lang}/blog/${slug}` (или наоборот).
+- `post.slug` имеет формат `ru/blog/slug` (три сегмента), а ты распаковываешь в `[lang, slug]` — mismatch.
+- Неправильная структура файлов (файл не там или имя файла/параметра не совпадает, например `[slug].astro` не в `pages/[lang]/blog/`).
+
+**Объяснение:** URL должен строго совпадать с маршрутом, который создаёт Astro на основе файлов. Если пост-страница лежит в `src/pages/[lang]/blog/[slug].astro`, URL должен быть `/ru/blog/slug`. Если ты создаёшь ссылку на `/ru/slug`, то 404.
+
+**Фикс:**
+
+- Всегда генерируй ссылки, соответствующие структуре:
+
+```ts
+// Если post.slug == "ru/blog/my-post"
+const parts = post.slug.split("/"); // ["ru","blog","my-post"]
+const lang = parts[0];
+const slug = parts.slice(2).join("/"); // на случай nested slugs
+<a href={`/${lang}/blog/${slug}`}>...</a>
+```
+
+- Или проще, если точно `lang/blog/slug`:
+
+```ts
+<a href={`/${post.slug}`}>...</a> // и тогда slug должно быть "ru/blog/slug"
+```
+
+- Убедись, что файл поста в `content/blog/ru/post-1.md` и `post.slug` действительно `ru/blog/post-1`.
+
+**Профилактика:** договорённость: `post.slug` форматируем единообразно.
+
+---
+
+# 8) `ReferenceError`/404 из-за файла с неправильным именем: `[categories].astro` vs `[category].astro`
+
+**Симптом:** `Missing parameter` или 404.
+
+**Причина:** Ты называл файл во множественном числе, а в `params` использовал единственное. Маршруты не совпадают.
+
+**Фикс:** Переименуй файл в единственное число `src/pages/[lang]/category/[category].astro` и возвращай `params.category`.
+
+**Профилактика:** имена файлов должны точно отражать ключи `params`.
+
+---
+
+# 9) Проблемы с frontmatter: `categories: "Искусственный интеллект"` vs `categories: ["ai"]`
+
+**Симптом:** Переводы из `lang.json` не подтягиваются: `catDict[category]` даёт `undefined`.
+
+**Причина:** В MD ты писал локализованный текст (русский), а в `lang.json` хранится ключ `ai`. Несоответствие ключей.
+
+**Фикс:**
+
+- Везде в frontmatter хранить **ключи**:
+
+```yaml
+categories: ["ai"]
+```
+
+- В `lang.json` — `ai: "Искусственный интеллект"`.
+
+**Профилактика:** данные (ключи) → переводы (lang.json). Это хорошая практика i18n.
+
+---
+
+# 10) Ошибки при десериализации/строгой типизации коллекций (Astro content schema)
+
+**Симптом:** TS просит типы, `post.data.categories` ~ `any`.
+
+**Решение (рекомендация):** Заведи `src/content/config.ts` и пропиши схему коллекции через `astro:content` и `zod`:
+
+```ts
+// src/content/config.ts
+import { defineCollection, z } from "astro:content";
+
+const blog = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    date: z.coerce.date(),
+    description: z.string().optional(),
+    image: z.string().optional(),
+    categories: z.union([z.array(z.string()), z.string()]).optional(),
+  }),
+});
+
+export const collections = { blog };
+```
+
+После этого `post.data.categories` станет типизированным и TS будет дружелюбнее.
+
+---
+
+## Быстрые, рабочие шаблоны (copy-paste)
+
+### utils/content.ts
+
+```ts
+// src/utils/content.ts
+import type { CollectionEntry } from "astro:content";
+
+export function extractCategories(p: CollectionEntry<"blog">): string[] {
+  const c = (p.data as any)?.categories;
+  if (!c) return [];
+  if (Array.isArray(c)) return c.map(String);
+  if (typeof c === "string") return [c];
+  return [];
+}
+```
+
+### pages/[lang]/blog/[slug].astro
+
+```ts
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import langData from "../../../data/lang.json";
+
+type Lang = "ru" | "en";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = await getCollection("blog");
+  return posts.map(p => {
+    const [lang, , slug] = p.slug.split("/"); // ["ru","blog","slug"]
+    return { params: { lang: lang as Lang, slug } };
+  });
+};
+
+const params = Astro.params as { lang: Lang; slug: string };
+const lang = params.lang;
+const slug = params.slug;
+
+const posts = await getCollection("blog");
+const post = posts.find(p => p.slug === `${lang}/blog/${slug}`);
+if (!post) throw new Error('Post not found');
+
+const { Content } = await post.render();
+---
+<!-- render ... -->
+```
+
+### pages/[lang]/category/[category].astro
+
+```ts
+---
+import { getCollection } from "astro:content";
+import { extractCategories } from "../../../utils/content";
+import type { GetStaticPaths } from "astro";
+
+type Lang = "ru" | "en";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const allPosts = await getCollection("blog");
+  const paths = [];
+  for (const lang of ["ru","en"] as const) {
+    const langPosts = allPosts.filter(p => p.slug.startsWith(`${lang}/`));
+    const cats = Array.from(new Set(langPosts.flatMap(extractCategories)));
+    for (const category of cats) paths.push({ params: { lang, category } });
+  }
+  return paths;
+};
+
+const params = Astro.params as { lang: Lang; category: string };
+const allPosts = await getCollection("blog");
+const posts = allPosts.filter(p => p.slug.startsWith(`${params.lang}/`) && extractCategories(p).includes(params.category));
+---
+<!-- render ... -->
+```
+
+---
+
+## Полезные советы и чек-лист перед запуском dev сервера
+
+1. Проверить структуру файлов: `src/pages/[lang]/blog/[slug].astro` и `src/pages/[lang]/category/[category].astro`.
+2. В `content/blog/ru/*.md` и `.../en/*.md` — `categories` как массив ключей.
+3. `getStaticPaths` — **только** `params`.
+4. В шаблонах ссылки на посты — `/${lang}/blog/${slug}` (или `/${post.slug}` если slug уже `lang/blog/slug`).
+5. Используй `extractCategories` из `src/utils/content.ts`.
+6. Добавь `src/content/config.ts` со схемой Zod — TS станет спокойнее.
+7. После изменений маршрутов — перезапусти dev сервер (`npm/ pnpm/yarn dev`) — иногда нужно для пересборки manifest.
+8. Логи: ставь `console.log` в `getStaticPaths` / в runtime и смотри в терминале.
+
+---
+
+## Кратко — самые частые ловушки и быстрые патчи
+
+- **Неправильный путь/файл** → 404. Решение: проверить имя файла и ссылку.
+- **Возврат `props` с объектами** → типы/память. Решение: возвращать только `params`.
+- **Импорт/локальная функция с одинаковым именем** → переименовать или удалить локальную.
+- **Категории в MD — текст, а не ключ** → заменить на ключи.
+- **TS ругается на индексирование** → optional chaining / helper / объявить тип `Record<string,string>`.

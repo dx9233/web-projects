@@ -1,0 +1,44 @@
+<section class="form-block">
+  <div class="form-container">
+    <h2>Получите каталог выбранной продукции с ценами и бесплатный образец</h2>
+    <p>Отправим его вам на почту, а по телефону уточним...</p>
+
+    <form>
+      <input type="text" placeholder="Имя*" required />
+      <input type="tel" placeholder="Номер телефона*" required />
+      <input type="email" placeholder="E-mail*" required />
+      <button type="submit">Получить прайс и образец</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+
+  .dark-theme {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+  }
+
+  button {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background-color: blue;
+  }
+</style>
