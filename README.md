@@ -106,11 +106,12 @@ php -S localhost:8000
 |      1      |    **laravel-app**     | PHP, SQL, Laravel |     Backend Laravel app     |      |  [Link](/backend/laravel-app/)   |
 | **Mobile**  |                        |                   |                             |      |                                  |
 |      2      |    **carrent-app**     | React Native, TS  |        Car Rent App         |      |   [Link](/mobile/carrent-app/)   |
+|      3      |   **clothing-store**   | React Native, TS  |        Mobile Store         |      | [Link](/mobile/clothing-store/)  |
 |   **Web**   |                        |                   |                             |      |                                  |
-|      3      |     **astroblog**      |       Astro       |         Astro blog          |      |     [Link](/web/astroblog/)      |
-|      4      | **astroblogportfolio** |       Astro       |    Astro blog-portfolio     |      | [Link](/web/astroblogportfolio/) |
-|      5      |    **beauty-salon**    |        Vue        |    Vue Beauty Salon App     |      |    [Link](/web/beauty-salon/)    |
-|      6      |     **gamestore**      |  Next, React, TS  |     Next Game Store App     |      |     [Link](/web/gamestore/)      |
-|      7      |  **luxurycar-react**   |       React       |     React landing page      |      |  [Link](/web/luxurycar-react/)   |
-|      8      |   **mainportfolio**    |       Astro       | Double lang Astro portfolio |      |   [Link](/web/mainportfolio/)    |
-|      9      |  **nextjs-portfolio**  |  Next, React, TS  |     Main Next Portfolio     |      |  [Link](/web/nextjs-portfolio/)  |
+|      4      |     **astroblog**      |       Astro       |         Astro blog          |      |     [Link](/web/astroblog/)      |
+|      5      | **astroblogportfolio** |       Astro       |    Astro blog-portfolio     |      | [Link](/web/astroblogportfolio/) |
+|      6      |    **beauty-salon**    |        Vue        |    Vue Beauty Salon App     |      |    [Link](/web/beauty-salon/)    |
+|      7      |     **gamestore**      |  Next, React, TS  |     Next Game Store App     |      |     [Link](/web/gamestore/)      |
+|      8      |  **luxurycar-react**   |       React       |     React landing page      |      |  [Link](/web/luxurycar-react/)   |
+|      9      |   **mainportfolio**    |       Astro       | Double lang Astro portfolio |      |   [Link](/web/mainportfolio/)    |
+|     10      |  **nextjs-portfolio**  |  Next, React, TS  |     Main Next Portfolio     |      |  [Link](/web/nextjs-portfolio/)  |
