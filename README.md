@@ -91,10 +91,10 @@ php -S localhost:8000
  <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxt/nuxt-original.svg" width="40" height="40" alt="Nuxt" /> -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" alt="TypeScript" />
-  <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" width="40" height="40" alt="Laravel" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" width="40" height="40" alt="Laravel" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40" height="40" alt="PHP" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="40" height="40" alt="Sqlite" /> 
- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" /> -->
+ <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" /> -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" width="40" height="40" alt="Vite" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg" width="40" height="40" alt="Composer" />
 </p>
@@ -112,5 +112,6 @@ php -S localhost:8000
 |   **Web**   |                         |                  |                                |      |                                        |
 |      4      |      **astroblog**      |      Astro       |           Astro Blog           |      |        [Link](/web/astroblog/)         |
 |      5      | **astroblogportfolio**  |      Astro       |      Astro Blog Portfolio      |      |    [Link](/web/astroblogportfolio/)    |
-|      6      |      **gamestore**      | Next, React, TS  |      Next Game Store App       |      |        [Link](/web/gamestore/)         |
-|      7      |     **luxury-car**      |      React       | React landing for detaling car |      |        [Link](/web/luxury-car/)        |
+|      6      |     **beautysalon**     |       Vue        |      Beauty Salon Vue App      |      |       [Link](/web/beautysalon/)        |
+|      7      |      **gamestore**      | Next, React, TS  |      Next Game Store App       |      |        [Link](/web/gamestore/)         |
+|      8      |     **luxury-car**      |      React       | React landing for detaling car |      |        [Link](/web/luxury-car/)        |
