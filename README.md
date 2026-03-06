@@ -12,15 +12,19 @@
 ```
 monorepo/
   backend/
-    laravel-app/
+    laravel-beautysalon/
+  legacy/
+    beautysalon-php
   mobile/
     carrent-app/
   packages/
     ui/
     utils/
+  screenshoots/
   web/
     astroblog/
     astroblogportfolio/
+    beautysalon/
     gamestore/
     luxury-car/
   package.json
@@ -97,12 +101,16 @@ php -S localhost:8000
 
 ## Projects
 
-|            |        Projects        |      Stack       |          Discription           | Demo |              Folder              |
-| :--------: | :--------------------: | :--------------: | :----------------------------: | :--: | :------------------------------: |
-| **Mobile** |                        |                  |                                |      |                                  |
-|     1      |    **carrent-app**     | React Native, TS |          Car Rent App          |      |   [Link](/mobile/carrent-app/)   |
-|  **Web**   |                        |                  |                                |      |                                  |
-|     2      |     **astroblog**      |      Astro       |           Astro Blog           |      |     [Link](/web/astroblog/)      |
-|     3      | **astroblogportfolio** |      Astro       |      Astro Blog Portfolio      |      | [Link](/web/astroblogportfolio/) |
-|     4      |     **gamestore**      | Next, React, TS  |      Next Game Store App       |      |     [Link](/web/gamestore/)      |
-|     5      |     **luxury-car**     |      React       | React landing for detaling car |      |     [Link](/web/luxury-car/)     |
+|             |        Projects         |      Stack       |          Discription           | Demo |                 Folder                 |
+| :---------: | :---------------------: | :--------------: | :----------------------------: | :--: | :------------------------------------: |
+| **Backend** |                         |                  |                                |      |                                        |
+|      1      | **laravel-beautysalon** |  Laravel + Vue   |   Beauty Salon Fullstack App   |      | [Link](./backend/laravel-beautysalon/) |
+| **Legacy**  |                         |                  |                                |      |                                        |
+|      2      |   **beautysalon-php**   |   Vanilla PHP    |         2000s Web App          |      |   [Link](./legacy/beautysalon-php/)    |
+| **Mobile**  |                         |                  |                                |      |                                        |
+|      3      |     **carrent-app**     | React Native, TS |          Car Rent App          |      |      [Link](/mobile/carrent-app/)      |
+|   **Web**   |                         |                  |                                |      |                                        |
+|      4      |      **astroblog**      |      Astro       |           Astro Blog           |      |        [Link](/web/astroblog/)         |
+|      5      | **astroblogportfolio**  |      Astro       |      Astro Blog Portfolio      |      |    [Link](/web/astroblogportfolio/)    |
+|      6      |      **gamestore**      | Next, React, TS  |      Next Game Store App       |      |        [Link](/web/gamestore/)         |
+|      7      |     **luxury-car**      |      React       | React landing for detaling car |      |        [Link](/web/luxury-car/)        |
