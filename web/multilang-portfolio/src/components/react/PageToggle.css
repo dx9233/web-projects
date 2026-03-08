@@ -1,0 +1,221 @@
+/* Tabs container */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Tab buttons */
+.tab-btn {
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: red;
+}
+
+/* Underline effect */
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: red;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.tab-btn.active {
+  color: red;
+  font-weight: 600;
+}
+
+.tab-btn.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Tab content */
+.tab-content {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Albums */
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.albums-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.latest-release {
+  flex: 1;
+}
+
+.latest-release ul {
+  margin-top: 10px;
+  font-size: 24px;
+  list-style-type: disc;
+  padding-left: 20px;
+  color: black;
+}
+
+.latest-release span {
+  margin-top: 10px;
+  font-size: 24px;
+  font-style: italic;
+  color: gray;
+}
+
+.latest-release button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.album-title {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.albums-gallery p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: left;
+  color: #000000;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.discography-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.library_buttom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 275px;
+  height: 56px;
+  margin-top: 20px;
+}
+
+/* ====== Responsive ====== */
+
+@media (max-width: 768px) {
+  .albums-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discography-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .albums-gallery h2 {
+    font-size: 1.25rem;
+  }
+
+  .latest-release h2 {
+    font-size: 1.25rem;
+  }
+
+  .latest-release ul,
+  .latest-release span {
+    font-size: 16px;
+  }
+
+  .library_buttom button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .album-card {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .library_buttom {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .albums-gallery h2,
+  .latest-release h2 {
+    font-size: 1rem;
+  }
+
+  .latest-release ul,
+  .latest-release span {
+    font-size: 14px;
+  }
+
+  .album-card {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+}

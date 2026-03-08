@@ -53,6 +53,11 @@
       "outputs": ["dist/**"]
     },
 
+    "multilang-portfolio#build": {
+      "dependsOn": [],
+      "outputs": ["dist/**"]
+    },
+
     // Vite
     "luxurycar-react#build": {
       "dependsOn": [],

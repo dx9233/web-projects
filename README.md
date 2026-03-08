@@ -23,6 +23,8 @@ monorepo/
     beautysalon/
     gamestore/
     luxury-car/
+    multilang-portfolio/
+    next-portfolio/
   package.json
   pnpm-workspace.yaml
   turbo.json
@@ -97,14 +99,15 @@ php -S localhost:8000
 
 ## Projects
 
-|            |        Projects        |      Stack       |          Discription           | Demo |              Folder              |
-| :--------: | :--------------------: | :--------------: | :----------------------------: | :--: | :------------------------------: |
-| **Mobile** |                        |                  |                                |      |                                  |
-|     1      |    **carrent-app**     | React Native, TS |          Car Rent App          |      |   [Link](/mobile/carrent-app/)   |
-|  **Web**   |                        |                  |                                |      |                                  |
-|     2      |     **astroblog**      |      Astro       |           Astro Blog           |      |     [Link](/web/astroblog/)      |
-|     3      | **astroblogportfolio** |      Astro       |      Astro Blog Portfolio      |      | [Link](/web/astroblogportfolio/) |
-|     4      |    **beautysalon**     |       Vue        |      Beauty Salon Vue App      |      |    [Link](/web/beautysalon/)     |
-|     5      |     **gamestore**      | Next, React, TS  |      Next Game Store App       |      |     [Link](/web/gamestore/)      |
-|     6      |     **luxury-car**     |      React       | React landing for detaling car |      |     [Link](/web/luxury-car/)     |
-|     7      |   **next-portfolio**   | React, Next, TS  |         Next portfolio         |      |   [Link](/web/next-portfolio/)   |
+|            |        Projects         |      Stack       |          Discription           | Demo |              Folder               |
+| :--------: | :---------------------: | :--------------: | :----------------------------: | :--: | :-------------------------------: |
+| **Mobile** |                         |                  |                                |      |                                   |
+|     1      |     **carrent-app**     | React Native, TS |          Car Rent App          |      |   [Link](/mobile/carrent-app/)    |
+|  **Web**   |                         |                  |                                |      |                                   |
+|     2      |      **astroblog**      |      Astro       |           Astro Blog           |      |      [Link](/web/astroblog/)      |
+|     3      | **astroblogportfolio**  |      Astro       |      Astro Blog Portfolio      |      | [Link](/web/astroblogportfolio/)  |
+|     4      |     **beautysalon**     |       Vue        |      Beauty Salon Vue App      |      |     [Link](/web/beautysalon/)     |
+|     5      |      **gamestore**      | Next, React, TS  |      Next Game Store App       |      |      [Link](/web/gamestore/)      |
+|     6      |     **luxury-car**      |      React       | React landing for detaling car |      |     [Link](/web/luxury-car/)      |
+|     7      | **multilang-portfolio** | Astro, React, TS |   Astro multi-lang portfolio   |      | [Link](/web/multilang-portfolio/) |
+|     8      |   **next-portfolio**    | React, Next, TS  |         Next portfolio         |      |   [Link](/web/next-portfolio/)    |
