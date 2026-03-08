@@ -6,8 +6,8 @@
     "detailsTitle": "Astro Theme",
     "description": "Portfolio template with blog functionality built on Astro",
     "stack": "Astro",
-    "demo": "https://astroblogportfolio.netlify.app/",
-    "github": "https://github.com/dmitrylean/astroblogportfolio",
+    "demo": "#",
+    "github": "#",
     "icons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
@@ -20,8 +20,8 @@
     "detailsTitle": "Astro Theme",
     "description": "Astro blog template",
     "stack": "Astro",
-    "demo": "https://astro-blogdev.netlify.app/",
-    "github": "https://github.com/dmitrylean/astro-blog",
+    "demo": "#",
+    "github": "#",
     "icons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
@@ -34,8 +34,8 @@
     "detailsTitle": "Template for creative professions",
     "description": "React/Node template for creative professionals.",
     "stack": "React",
-    "demo": "https://nextjs-for-creative.netlify.app",
-    "github": "https://github.com/dmitrylean/creative-template-nextjs",
+    "demo": "#",
+    "github": "#",
     "icons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
@@ -50,8 +50,8 @@
     "detailsTitle": "Strike The Hub",
     "description": "Gaming portal dedicated to shooters",
     "stack": "React",
-    "demo": "https://strikethehub.netlify.app",
-    "github": "https://github.com/dmitrylean/strikethehub",
+    "demo": "№",
+    "github": "№",
     "icons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
@@ -64,8 +64,8 @@
     "detailsTitle": "Crash The Routines",
     "description": "Frontend projects, codebase, library, templates, and documentation",
     "stack": "Astro",
-    "demo": "https://crashtheroutines.netlify.app/",
-    "github": "https://github.com/dmitrylean/frontend-basis-projects",
+    "demo": "№",
+    "github": "№",
     "icons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
@@ -80,8 +80,8 @@
     "detailsTitle": "React Admin",
     "description": "Admin dashboard built with React.",
     "stack": "React",
-    "demo": "https://react-admin10.netlify.app/",
-    "github": "https://github.com/dmitrylean/react-dashboard",
+    "demo": "№",
+    "github": "№",
     "icons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"

@@ -7,11 +7,11 @@
 # *.gen.* linguist-generated
 
 # Hide specific languages
-*.html linguist-vendored
-*.css linguist-vendored
-*.scss linguist-vendored
-*.astro linguist-vendored
-*.mdx linguist-vendored
+# *.html linguist-vendored
+# *.css linguist-vendored
+# *.scss linguist-vendored
+# *.astro linguist-vendored
+# *.mdx linguist-vendored
 # *.py linguist-vendored
 # *.php linguist-vendored
 # *.go linguist-vendored
