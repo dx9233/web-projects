@@ -37,21 +37,17 @@ monorepo/
 
 ## Running and building locally
 
-### All projects at once
+### Installing all dependencies
 
-| Script                 | Description                         |
-| ---------------------- | ----------------------------------- |
-| **pnpm install:all**   | Installing all dependencies         |
-| **pnpm install:php**   | Installing all dependencies **PHP** |
-| **pnpm install:js**    | Installing all dependencies **JS**  |
-| **pnpm build:all**     | Build all projects                  |
-| **pnpm build:laravel** | Build **Laravel**                   |
-| **pnpm build:js**      | Build all JS-projects               |
-| **pnpm dev:all**       | All dev servers                     |
-| **pnpm dev:laravel**   | Dev server **Laravel**              |
-| **pnpm dev:next**      | Dev server **Next**                 |
-| **pnpm dev:react**     | Dev server **React**                |
-| **pnpm dev:astro**     | Dev server **Astro**                |
+```bash
+pnpm install
+```
+
+### Building all projects
+
+```bash
+pnpm run build
+```
 
 ### One project
 
