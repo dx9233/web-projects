@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ArticlesSection from "../components/ArticlesSection.astro";
+import { getCollection } from "astro:content";
+import CategoriesArticles from "../components/CategoriesArticles.astro";
+import AuthorSection from "../components/AuthorSection.astro";
+
+const posts = await getCollection("articles");
+---
+
+<Layout>
+  <AuthorSection />
+  <CategoriesArticles />
+  <ArticlesSection posts={posts} />
+</Layout>

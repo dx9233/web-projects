@@ -1,0 +1,349 @@
+/*
+Theme Name: Morent
+Theme URI: https://example.com/luxury-theme
+Author: Adam Lean
+Author URI: https://example.com
+Description: A luxury car detailing landing page WordPress theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: luxurycar
+Tags: auto, car, store, car shop
+*/
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100vw;
+  min-height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background: white;
+  color: white;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1, h2, h3, p {
+  color: black;
+}
+
+/* Header */
+
+.logo-text {
+  text-decoration: none;
+  color: #3563E9;
+  font-size: 32px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  height: 124px;
+}
+
+.topbar__search {
+  flex: 1;
+  max-width: 492px;
+  height: 44px;
+  margin: 0 40px;
+  margin-top: 40px;
+}
+
+.topbar__icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar__icons a {
+  position: relative;
+  font-size: 18px;
+  color: #333;
+}
+
+.topbar__icons .dot {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 50%;
+}
+
+/* Hero */
+
+.hero {
+  background: #f5f6fa;
+  padding: 40px;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.hero__card {
+  background: linear-gradient(135deg, #4e8df5, #1d4ed8);
+  border-radius: 16px;
+  color: #fff;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  max-width: 640px;
+  height: 360px;
+}
+
+.hero__card img {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  width: 100%;
+}
+
+.hero__filter {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #fff;
+  height: 132px;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.filter__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Footer */
+
+.site-footer {
+  background: #fff;
+  padding: 40px 60px;
+  border-top: 1px solid #e5e5e5;
+  color: #333;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-menus {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-menu h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.footer-menu .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu .menu li {
+  margin-bottom: 6px;
+
+  font-size: 16px;
+  text-decoration: none;
+  color: #13131399;
+}
+
+.footer-bottom {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.footer-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+}
+
+/* Front Catalogue */
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.car-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+  width: 304px;
+  height: auto;
+}
+
+.car-card:hover {
+  transform: translateY(-4px);
+}
+
+.car-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.car-type {
+  font-size: 20px;
+  color: #6b7280;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  font-size: 16px;
+}
+
+.favorite-btn.active {
+  color: red;
+}
+
+.car-card__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px 0;
+  height: 120px;
+}
+
+.car-card__specs {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.car-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.car-card__price {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 116px;
+  height: 44px;
+
+/* PopUp */
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 400px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+}

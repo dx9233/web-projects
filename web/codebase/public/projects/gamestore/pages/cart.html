@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Game Store | Cart</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <img src="../assets/svg/logo.svg" alt="logo" />
+        <nav class="nav">
+          <a href="../index.html">Home</a>
+          <a href="./store.html">Store</a>
+          <a href="./services.html">Services</a>
+          <a href="./news.html">News</a>
+          <a href="./support.html">Support</a>
+          <a href="./contacts.html">Contact</a>
+        </nav>
+        <button class="member-btn">Member Area</button>
+      </div>
+    </header>
+
+   <section class="cart-page">
+
+  <!-- HERO -->
+  <div class="cart-hero">
+    <div class="container">
+      <h1>Cart</h1>
+
+      <div class="cart-benefits">
+        <div>Exclusive benefits</div>
+        <div>Rewards</div>
+        <div>Easy purchases</div>
+        <div>Simplified refund</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART CONTENT -->
+  <div class="cart-content">
+    <div class="container">
+      <div class="cart-layout">
+
+        <!-- LEFT: Items -->
+        <div class="cart-items">
+
+          <div class="cart-item">
+            <img src="game.jpg" alt="">
+
+            <div class="item-info">
+              <h3>Assassin's Creed Valhalla Standard</h3>
+              <div class="price">$25.99 <del>$59.99</del></div>
+
+              <p class="item-desc">
+                Short description of the game.
+              </p>
+
+              <div class="item-actions">
+                <div class="quantity">
+                  <button>-</button>
+                  <span>2</span>
+                  <button>+</button>
+                </div>
+                <button class="remove">Remove</button>
+              </div>
+            </div>
+
+            <div class="item-total">
+              <span>Total:</span>
+              <strong>$51.98</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Summary -->
+        <aside class="cart-summary">
+          <h4>Cart Totals</h4>
+
+          <div class="coupon">
+            <input type="text" placeholder="Add a coupon">
+          </div>
+
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span>$51.98</span>
+          </div>
+
+          <div class="summary-line total">
+            <span>Total</span>
+            <span>$51.98</span>
+          </div>
+
+          <button class="btn-primary">
+            Proceed to Checkout
+          </button>
+
+          <div class="payments">
+            <span>VISA</span>
+            <span>PayPal</span>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- PROMO -->
+  <div class="cart-promo">
+    <div class="container promo-layout">
+
+      <div class="promo-text">
+        <h2>Buy games and take part in the drawing.</h2>
+        <p>
+          Take on high-risk, high-reward missions...
+        </p>
+        <button class="btn-outline">
+          Information about the promotion
+        </button>
+      </div>
+
+      <div class="promo-image">
+        <img src="../assets/img/headset.png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img
+              src="../assets/svg/footer_logo.svg"
+              class="footer__logo"
+              alt="logo"
+            />
+
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form.
+            </p>
+
+            <div class="footer__socials">
+              <a href="#">T</a>
+              <a href="#">TG</a>
+              <a href="#">IG</a>
+              <a href="#">YT</a>
+              <a href="#">DC</a>
+            </div>
+          </div>
+
+          <div class="footer__faq">
+            <div class="accordion-item">
+              <button class="accordion-header active">
+                Suspendisse in velit quis ex faucibus
+              </button>
+              <div class="accordion-content open">
+                <p>
+                  Suspendisse in velit quis ex faucibus vestibulum ut eu sem.
+                  Maecenas semper dui massa.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Maecenas eget tortor venenatis, dapibus velit
+              </button>
+              <div class="accordion-content">
+                <p>Hidden content...</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Ut ornare consequat sollicitudin
+              </button>
+              <div class="accordion-content">
+                <p>Hidden content...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__copy">© 2022 All rights reserved.</div>
+
+          <div class="footer__links">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Login / Signup</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

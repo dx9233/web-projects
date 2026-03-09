@@ -1,0 +1,58 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const example = await getCollection("example");
+  return example.map((example) => ({
+    params: { slug: example.slug },
+    props: { example },
+  }));
+}
+
+const { example } = Astro.props;
+
+const { Content } = await example.render();
+---
+
+<Layout>
+  <article class="blog-post">
+    <div class="container">
+      <h1>{example.data.title}</h1>
+
+      {
+        (
+          <div class="post-body">
+            <Content />
+          </div>
+        )
+      }
+    </div>
+  </article>
+
+  <style>
+    .post-image {
+      justify-content: center;
+      height: 100%;
+      width: 1200px;
+    }
+
+    .post-meta {
+      justify-content: flex-start;
+      font-size: 16px;
+    }
+
+    .post-tags {
+      justify-content: space-between;
+    }
+
+    .description {
+      justify-content: center;
+    }
+
+    .post-body {
+      justify-content: flex-start;
+      font-size: 18px;
+    }
+  </style>
+</Layout>

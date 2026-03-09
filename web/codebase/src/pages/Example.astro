@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ExampleSection from "../components/ExampleSection.astro";
+import { getCollection } from "astro:content";
+
+const example = await getCollection("example");
+---
+
+<Layout>
+  <ExampleSection example={example} />
+</Layout>

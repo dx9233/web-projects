@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delote Beauty | Contacts</title>
+    <meta name="description" content="description" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://example.com/" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <button class="burger" id="openMenu" aria-label="Open Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <button class="close" id="closeMenu" aria-label="Close Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav class="navbar" id="menu">
+          <div class="social-links">
+            <a
+              href="<?php echo esc_url($instagram); ?>"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../assets/svg/instagram.svg"
+                alt="Instagram"
+                width="24"
+                height="24"
+                color="white"
+              />
+            </a>
+          </div>
+
+          <div class="menu-left" id="menu-left">
+            <a href="../index.html">Home</a>
+            <a href="./masters.html">Masters</a>
+            <a href="#">Comsmetics</a>
+          </div>
+
+          <div class="navbar-center">
+            <img
+              src="../assets/svg/omega-sign-svgrepo-com 1.svg"
+              alt="logo"
+              class="logo-symbol"
+            />
+          </div>
+
+          <div class="menu-right" id="menu-right">
+            <a href="#">Action</a>
+            <a href="#">Review</a>
+            <a href="./contact.html">Contacts</a>
+          </div>
+        </nav>
+
+        <div class="overlay" id="overlay"></div>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="container">
+        <div class="contacts">
+          <div class="container">
+            <h2>Contacts</h2>
+
+            <div class="map">
+              <img src="./assets/img/map.png" alt="Map" />
+            </div>
+
+            <!-- Contacts -->
+            <div class="contacts-grid">
+              <div class="contact-item">
+                <h3>Contacts</h3>
+                <p>+7 (812) 123-45-67</p>
+                <p>+7 (911) 123-45-67</p>
+                <p>Novostroevsky Prospekt, Building 36, Building C</p>
+              </div>
+
+              <div class="contact-item">
+                <h3>Opening Hours</h3>
+                <p>10:00 AM to 9:00 PM (Mon-Fri)</p>
+                <p>11:00 AM to 8:00 PM (Sat-Sun)</p>
+              </div>
+
+              <div class="contact-item">
+                <h3>Contacts</h3>
+                <p>+7 (812) 123-45-67</p>
+                <p>+7 (911) 123-45-67</p>
+                <p>Novostroevsky Prospekt, Building 36, Lit. S</p>
+              </div>
+
+              <div class="contact-item">
+                <h3>Operating mode</h3>
+                <p>From 10:00 to 21:00 (Mon-Fri)</p>
+                <p>From 11:00 to 20:00 (Sat-Sun)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img
+            src="./assets/svg/omega-sign-svgrepo-com 1.svg"
+            alt="Логотип"
+            class="logo-symbol"
+          />
+        </div>
+
+        <div class="footer-column">
+          <h3>Contacts</h3>
+          <p><?php the_field('phone1', 'option'); ?></p>
+          <p><?php the_field('phone2', 'option'); ?></p>
+          <p><?php the_field('address', 'option'); ?></p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Operating mode</h3>
+          <p><?php the_field('work_days', 'option'); ?></p>
+          <p><?php the_field('work_weekend', 'option'); ?></p>
+        </div>
+
+        <div class="footer-column">
+          <h3>We are on Instagram</h3>
+          <a href="#" class="social-link" target="_blank">
+            <img
+              src="../assets/svg/instagram.svg"
+              alt="Instagram"
+              color="white"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2017 - <?php echo date('Y'); ?></p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const openBtn = document.getElementById("openMenu");
+        const closeBtn = document.getElementById("closeMenu");
+        const menu = document.getElementById("menu");
+        const overlay = document.getElementById("overlay");
+
+        openBtn.addEventListener("click", () => {
+          menu.classList.add("active");
+          overlay.classList.add("active");
+          closeBtn.classList.add("active");
+          openBtn.style.display = "none";
+        });
+
+        closeBtn.addEventListener("click", () => {
+          menu.classList.remove("active");
+          overlay.classList.remove("active");
+          closeBtn.classList.remove("active");
+          openBtn.style.display = "block";
+        });
+
+        overlay.addEventListener("click", () => {
+          menu.classList.remove("active");
+          overlay.classList.remove("active");
+          closeBtn.classList.remove("active");
+          openBtn.style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>

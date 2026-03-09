@@ -1,0 +1,33 @@
+# === Main Project Language ===
+*.php linguist-detectable=true
+*.php linguist-language=PHP
+
+# === Web Styles ===
+*.css linguist-detectable=true
+*.css linguist-language=CSS
+
+# === Client-Side JS ===
+*.js linguist-detectable=true
+*.js linguist-language=JavaScript
+
+# === SQL and Configurations ===
+*.sql linguist-detectable=true
+*.sql linguist-language=SQL
+
+# === JSON and Data (Not Code) ===
+*.json linguist-detectable=false
+*.json linguist-language=JSON
+
+# === Hack / Service Files — Exclude ===
+*.hack linguist-detectable=false
+
+# === Markup / Layout ===
+*.html linguist-detectable=true
+*.html linguist-language=HTML
+
+# === Other service files — ignore ===
+*.md linguist-detectable=false
+*.txt linguist-detectable=false
+*.lock linguist-detectable=false
+*.ini linguist-detectable=false
+*.env linguist-detectable=false

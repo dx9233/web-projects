@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Portfolio Site",
+    "description": "Personal portfolio website",
+    "img": "../assets/img/portfolio/astroblogportfolio.jpg",
+    "stack": "React",
+    "icons": ["/icons/react.svg"],
+    "demo": "https://example.com",
+    "github": "https://github.com/example"
+  },
+  {
+    "title": "Blog on Wordpress",
+    "description": "Corporate blog",
+    "img": "../assets/img/portfolio/luxurycar.jpg",
+    "stack": "Wordpress",
+    "icons": ["/icons/wp.svg"],
+    "demo": "",
+    "github": ""
+  }
+]

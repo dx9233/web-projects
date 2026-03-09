@@ -1,0 +1,32 @@
+.author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.author_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 95px;
+  gap: 10px;
+
+  width: 1109px;
+  height: 250px;
+
+  background: #f7f8fa;
+  border-radius: 24px;
+}
+
+.author_block p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.4);
+}

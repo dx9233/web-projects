@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delote Beauty | Masters</title>
+    <meta name="description" content="description" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://example.com/" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <button class="burger" id="openMenu" aria-label="Open Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <button class="close" id="closeMenu" aria-label="Close Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav class="navbar" id="menu">
+          <div class="social-links">
+            <a
+              href="<?php echo esc_url($instagram); ?>"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../assets/svg/instagram.svg"
+                alt="Instagram"
+                width="24"
+                height="24"
+                color="white"
+              />
+            </a>
+          </div>
+
+          <div class="menu-left" id="menu-left">
+            <a href="../index.html">Home</a>
+            <a href="./masters.html">Masters</a>
+            <a href="#">Comsmetics</a>
+          </div>
+
+          <div class="navbar-center">
+            <img
+              src="../assets/svg/omega-sign-svgrepo-com 1.svg"
+              alt="logo"
+              class="logo-symbol"
+            />
+          </div>
+
+          <div class="menu-right" id="menu-right">
+            <a href="#">Action</a>
+            <a href="#">Review</a>
+            <a href="./contact.html">Contacts</a>
+          </div>
+        </nav>
+
+        <div class="overlay" id="overlay"></div>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="masters">
+        <h2 class="masters__title">Our Masters</h2>
+
+        <div class="masters__grid">
+          <div class="master-card">
+            <div class="master-card__img">
+              <img
+                src="https://i.pinimg.com/736x/a5/93/25/a59325624066bebd0598d179f7da7d8b.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="master-card__info">
+              <h3>Name</h3>
+              <p>Makeup artist</p>
+            </div>
+          </div>
+
+          <div class="master-card">
+            <div class="master-card__img">
+              <img
+                src="https://c4.wallpaperflare.com/wallpaper/771/70/487/caitlin-mcswain-brunette-face-portrait-wallpaper-preview.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="master-card__info">
+              <h3>Name</h3>
+              <p>Makeup artist</p>
+            </div>
+          </div>
+
+          <div class="master-card">
+            <div class="master-card__img">
+              <img src="https://wallpapercave.com/wp/wp13265144.jpg" alt="" />
+            </div>
+
+            <div class="master-card__info">
+              <h3>Name</h3>
+              <p>Makeup artist</p>
+            </div>
+          </div>
+
+          <div class="master-card">
+            <div class="master-card__img">
+              <img
+                src="https://applescoop.org/image/wallpapers/mac/beyonce-2000s-2010s-pop-stars-singer-gorgeous-23-11-2024-1732393557-hd-wallpaper.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="master-card__info">
+              <h3>Name</h3>
+              <p>Makeup artist</p>
+            </div>
+          </div>
+
+          <div class="master-card">
+            <div class="master-card__img">
+              <img
+                src="https://i.pinimg.com/736x/81/0f/af/810faf0a277f14c281e87f9ca1bc11ef.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="master-card__info">
+              <h3>Name</h3>
+              <p>Makeup artist</p>
+            </div>
+          </div>
+
+          <div class="master-card">
+            <div class="master-card__img">
+              <img
+                src="https://www.shutterstock.com/editorial/image-editorial/NbT3k9y2N8T6Ad59MDAwNw==/jessica-alba-440nw-5884798t.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="master-card__info">
+              <h3>Name</h3>
+              <p>Makeup artist</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <h2 class="services-title">Service Prices</h2>
+          <div class="services-content">
+            <div class="services-image">
+              <img src="../assets/img/woman.png" alt="Prices" />
+            </div>
+
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-text">
+                  <h3>Women's Styling</h3>
+                  <p>+ End Treatment</p>
+                </div>
+                <div class="service-price">1,000 ₽</div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-text">
+                  <h3>Women's Styling</h3>
+                  <p>+ End Treatment</p>
+                </div>
+                <div class="service-price">1,000 ₽</div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-text">
+                  <h3>Women's Styling</h3>
+                  <p>+ End Treatment</p>
+                </div>
+                <div class="service-price">1,000 ₽</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img
+            src="../assets/svg/omega-sign-svgrepo-com 1.svg"
+            alt="Логотип"
+            class="logo-symbol"
+          />
+        </div>
+
+        <div class="footer-column">
+          <h3>Contacts</h3>
+          <p><?php the_field('phone1', 'option'); ?></p>
+          <p><?php the_field('phone2', 'option'); ?></p>
+          <p><?php the_field('address', 'option'); ?></p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Operating mode</h3>
+          <p><?php the_field('work_days', 'option'); ?></p>
+          <p><?php the_field('work_weekend', 'option'); ?></p>
+        </div>
+
+        <div class="footer-column">
+          <h3>We are on Instagram</h3>
+          <a href="#" class="social-link" target="_blank">
+            <img
+              src="../assets/svg/instagram.svg"
+              alt="Instagram"
+              color="white"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2017 - <?php echo date('Y'); ?></p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const openBtn = document.getElementById("openMenu");
+        const closeBtn = document.getElementById("closeMenu");
+        const menu = document.getElementById("menu");
+        const overlay = document.getElementById("overlay");
+
+        openBtn.addEventListener("click", () => {
+          menu.classList.add("active");
+          overlay.classList.add("active");
+          closeBtn.classList.add("active");
+          openBtn.style.display = "none";
+        });
+
+        closeBtn.addEventListener("click", () => {
+          menu.classList.remove("active");
+          overlay.classList.remove("active");
+          closeBtn.classList.remove("active");
+          openBtn.style.display = "block";
+        });
+
+        overlay.addEventListener("click", () => {
+          menu.classList.remove("active");
+          overlay.classList.remove("active");
+          closeBtn.classList.remove("active");
+          openBtn.style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+.red-text {
+  color: rgb(192, 57, 57);
+  font-size: 18px;
+}
+
+.services {
+  color: black;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.services-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.services-list {
+  flex: 1 1 50%;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-text h3 {
+  color: black;
+  font-size: 27px;
+  margin: 0;
+}
+
+.service-text p {
+  color: black;
+  font-size: 18px;
+  margin: 4px 0 0;
+  opacity: 0.8;
+}
+
+.service-price {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  white-space: nowrap;
+}

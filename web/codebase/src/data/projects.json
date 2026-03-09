@@ -1,0 +1,138 @@
+[
+  {
+    "title": "Blitz State",
+    "description": "Лендинг агенства недвижимости",
+    "category": "wordpress",
+    "img": "/assets/img/blitzestate.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/blitzestate/"
+  },
+  {
+    "title": "Car Service",
+    "description": "Лендинг автомастерской",
+    "category": "wordpress",
+    "img": "/assets/img/carservice.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/carservice/"
+  },
+  {
+    "title": "Отель Долина",
+    "description": "Лендинг отеля",
+    "category": "wordpress",
+    "img": "/assets/img/hoteldolina.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/dolinahotel/"
+  },
+  {
+    "title": "Luxury Detailing",
+    "description": "Лендинг детейлинга автомобилей",
+    "category": "wordpress",
+    "img": "/assets/img/luxurycar.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/luxurycar/"
+  },
+  {
+    "title": "РумТибет",
+    "description": "Лендинг горных экскурсий",
+    "category": "wordpress",
+    "img": "/assets/img/mountainwalking.png",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/mountainwalking/"
+  },
+  {
+    "title": "Music Artist",
+    "description": "Сайт музыканта",
+    "category": "wordpress",
+    "img": "/assets/img/musicartist.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/musicartist/"
+  },
+  {
+    "title": "Music Band",
+    "description": "Сайт музыкальной группы",
+    "category": "wordpress",
+    "img": "/assets/img/musicband.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/musicband/"
+  },
+  {
+    "title": "Поставщик Дальнего Востока",
+    "description": "Лендинг логистической компании",
+    "category": "wordpress",
+    "img": "/assets/img/pdvpage.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/pdv-landing/"
+  },
+  {
+    "title": "Softerio Tech",
+    "description": "Лендинг студии разработки",
+    "category": "wordpress",
+    "img": "/assets/img/softerio-tech.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/softeriotech/"
+  },
+  {
+    "title": "ReadyOn",
+    "description": "Лендинг аренды спорткаров",
+    "category": "wordpress",
+    "img": "/assets/img/sportcarrent.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/sportcarrent/"
+  },
+  {
+    "title": "Wishbone Partners",
+    "description": "Лендинг архитектурной компании",
+    "category": "wordpress",
+    "img": "/assets/img/wishbonelanding.jpg",
+    "tags": ["HTML", "CSS", "JS", "WORDPRESS"],
+    "demo": "/projects/wishbone/"
+  },
+  {
+    "title": "WolfMedia",
+    "description": "Лендинг диджитал агенства",
+    "category": "tailwind",
+    "img": "/assets/img/wolfmedia.jpg",
+    "tags": ["HTML", "TAILWIND"],
+    "demo": "/projects/wolfmedia/"
+  },
+  {
+    "title": "Astro Blog + Portfolio",
+    "description": "Шаблон портфолио с функцией блога на Astro",
+    "category": "astro",
+    "img": "/assets/img/astroblogportfolio.jpg",
+    "tags": ["ASTRO"],
+    "demo": "https://astroblogportfolio.pages.dev/"
+  },
+  {
+    "title": "Astro Blog",
+    "description": "Шаблон Astro-блога",
+    "category": "astro",
+    "img": "/assets/img/astroblog.jpg",
+    "tags": ["ASTRO"],
+    "demo": "https://astro-blog-45n.pages.dev/"
+  },
+  {
+    "title": "Creative Artist Template",
+    "description": "Шаблон на React/Node для творческих профессий.",
+    "category": "react",
+    "img": "/assets/img/creativeartist.jpg",
+    "tags": ["REACT"],
+    "demo": "https://nextjs-for-creative.netlify.app"
+  },
+  {
+    "title": "Strike The Hub",
+    "description": "Геймерский портал, посвященный шутерам",
+    "category": "react",
+    "img": "/assets/img/strikethehub.jpg",
+    "tags": ["REACT", "TAILWIND"],
+    "demo": "https://strikethehub.pages.dev/"
+  },
+  {
+    "title": "React Admin",
+    "description": "Админ панель на React.",
+    "category": "react",
+    "img": "/assets/img/reactadmin.jpg",
+    "tags": ["REACT", "TAILWIND"],
+    "demo": "https://react-admin-76r.pages.dev/"
+  }
+]

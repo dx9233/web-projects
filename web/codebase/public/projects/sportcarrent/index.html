@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ready On | Car Rental</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <img src="./assets/img/logo.png" class="logo" />
+        <nav class="nav">
+          <ul>
+            <li><a href="#trip">Track Days</a></li>
+            <li><a href="#">Sports Cars</a></li>
+            <li><a href="#">Certificates</a></li>
+            <li><a href="#">How the Races Work</a></li>
+          </ul>
+        </nav>
+        <div class="lang-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fas fa-phone phone-red"></i></a>
+          <div class="lang">ES</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content container">
+        <h1>Track Days<br /><span>with ReadyOne</span></h1>
+        <p>
+          Not just a sports car rental, but a true immersion into the world of
+          motorsports.
+        </p>
+        <a href="#" class="btn">Book</a>
+      </div>
+    </section>
+
+    <section class="trip-section" id="trip">
+      <div class="container">
+        <div class="trip-grid">
+          <div class="trip-left">
+            <h2><span>CHOOSE A DATE</span><br />FOR YOUR TRIP</h2>
+            <div class="trip-date">
+              <span class="big-date">31</span>
+              <span class="month">MAY</span>
+              <div class="weekday">Tuesday</div>
+            </div>
+            <div class="arrows">
+              <button class="arrow prev">&lt;</button>
+              <button class="arrow next">&gt;</button>
+            </div>
+            <div class="track">
+              <img src="./assets/img/track.png" alt="Track" />
+              <div class="instructor">
+                <img src="./assets/img/instructor.png" alt="Instructor" />
+                <span>Yaroslav Migitichev<br /><small>Instructor</small></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="trip-right">
+            <div class="calendar">
+              <div class="calendar-header">
+                <span class="month">JUNE</span>
+              </div>
+              <div class="calendar-grid"></div>
+            </div>
+
+            <div class="reviews">
+              <div class="review">
+                <span class="review-date">JUNE 19</span>
+                <p>
+                  My trip was incredible! I'll definitely take a second trip.
+                </p>
+              </div>
+              <div class="review">
+                <span class="review-date">JUNE 22</span>
+                <p>
+                  My trip was incredible! I'll definitely take a second trip.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program">
+      <div class="container">
+        <h2 class="program-title">WHAT DOES THE PROGRAM INCLUDES?</h2>
+
+        <div class="program-item">
+          <div class="program-number">01</div>
+          <div class="program-content">
+            <img
+              src="./assets/img/car.png"
+              alt="Аренда спорткара"
+              class="program-img"
+            />
+            <div>
+              <h3>SPORTS CAR RENTAL</h3>
+              <p>Cars Ready for Extreme Use</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="program-item">
+          <div class="program-number">02</div>
+          <div class="program-content">
+            <img
+              src="./assets/img/helmet.png"
+              alt="Гоночный инструктор"
+              class="program-img"
+            />
+            <div>
+              <h3>RACE INSTRUCTOR</h3>
+              <p>Professionals training pilots of all levels</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="program-item">
+          <div class="program-number">03</div>
+          <div class="program-content">
+            <img
+              src="./assets/img/map.png"
+              alt="Потрясающие треки"
+              class="program-img"
+            />
+            <div>
+              <h3>AMAZING TRACKS</h3>
+              <p>The Best Race Tracks in Belgium</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="program-item">
+          <div class="program-number">04</div>
+          <div class="program-content">
+            <img
+              src="./assets/img/gloves.png"
+              alt="Внимание к каждой детали"
+              class="program-img"
+            />
+            <div>
+              <h3>ATTENTION TO EVERY DETAIL</h3>
+              <p>
+                Equipped boxes and custom equipment – ​​we've taken care of
+                everything.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="program-item">
+          <div class="program-number">05</div>
+          <div class="program-content">
+            <img
+              src="./assets/img/flag.png"
+              alt="Незабываемый опыт"
+              class="program-img"
+            />
+            <div>
+              <h3>AN UNFORGETTABLE EXPERIENCE</h3>
+              <p>
+                Video of the ride and certificate of completion for each client
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer"></footer>
+    <!-- <script>
+  const openBtn = document.getElementById("openMenu");
+const closeBtn = document.getElementById("closeMenu");
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+openBtn.addEventListener("click", () => {
+  menu.classList.add("active");
+  overlay.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  menu.classList.remove("active");
+  overlay.style.display = "none";
+});
+
+overlay.addEventListener("click", () => {
+  menu.classList.remove("active");
+  overlay.style.display = "none";
+});
+  </script>-->
+    <script src="./calendar.js"></script>
+  </body>
+</html>

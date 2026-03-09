@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NewsSection from "../components/NewsSection.astro";
+import { getCollection } from "astro:content";
+// import CategoriesNews from "../components/CategoriesNews.astro";
+
+const news = await getCollection("news");
+---
+
+<Layout>
+  <!--<CategoriesNews /> -->
+  <NewsSection news={news} />
+</Layout>

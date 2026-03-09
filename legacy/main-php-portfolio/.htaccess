@@ -1,0 +1,23 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php [L,QSA]
+
+session.save_path = "C:\Programming\php-sessions"
+
+RewriteEngine On
+
+# Перенаправление для категорий
+RewriteRule ^blog/category/([^/]+)/?$ index.php?route=blog&category=$1 [L,QSA]
+
+# Перенаправление для отдельных статей
+RewriteRule ^blog/([^/]+)/?$ index.php?route=post&slug=$1 [L,QSA]
+
+# Перенаправление для главной страницы блога
+RewriteRule ^blog/?$ index.php?route=blog [L,QSA]
+
+# Главная страница сайта
+RewriteRule ^$ index.php?route=home [L,QSA]
+
+# Для остальных страниц (например, about)
+RewriteRule ^([^/]+)/?$ index.php?route=$1 [L,QSA]

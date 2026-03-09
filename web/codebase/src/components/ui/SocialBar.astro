@@ -1,0 +1,85 @@
+<div class="social-bar">
+  <div class="language-switch">
+    <a href="./ru/index.html" class="lang-btn">RU</a>
+    <a href="./es/index.html" class="lang-btn">ES</a>
+  </div>
+
+  <div class="icons">
+    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+  <div class="label">Social</div>
+  <div class="line"></div>
+</div>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<style>
+  .social-bar {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .icons a {
+    color: red;
+    font-size: 24px;
+    transition: 0.3s;
+  }
+
+  .icons a:hover {
+    transform: scale(1.2);
+  }
+
+  .label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 20px 0;
+  }
+
+  .line {
+    width: 2px;
+    height: 40px;
+    background-color: red;
+  }
+
+  /* Lang Switcher */
+
+  .language-switch {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .lang-btn {
+    background: none;
+    border: 1px solid red;
+    color: red;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .lang-btn:hover {
+    background: red;
+    color: black;
+  }
+</style>
