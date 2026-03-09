@@ -21,6 +21,7 @@ monorepo/
     astroblog/
     astroblogportfolio/
     beautysalon/
+    gameportal/
     gamestore/
     luxury-car/
     multilang-portfolio/
@@ -107,7 +108,8 @@ php -S localhost:8000
 |     2      |      **astroblog**      |      Astro       |           Astro Blog           |      |      [Link](/web/astroblog/)      |
 |     3      | **astroblogportfolio**  |      Astro       |      Astro Blog Portfolio      |      | [Link](/web/astroblogportfolio/)  |
 |     4      |     **beautysalon**     |       Vue        |      Beauty Salon Vue App      |      |     [Link](/web/beautysalon/)     |
-|     5      |      **gamestore**      | Next, React, TS  |      Next Game Store App       |      |      [Link](/web/gamestore/)      |
-|     6      |     **luxury-car**      |      React       | React landing for detaling car |      |     [Link](/web/luxury-car/)      |
-|     7      | **multilang-portfolio** | Astro, React, TS |   Astro multi-lang portfolio   |      | [Link](/web/multilang-portfolio/) |
-|     8      |   **next-portfolio**    | React, Next, TS  |         Next portfolio         |      |   [Link](/web/next-portfolio/)    |
+|     5      |     **gameportal**      |    React, TS     |     React Game Portal App      |      |     [Link](/web/gameportal/)      |
+|     6      |      **gamestore**      | Next, React, TS  |      Next Game Store App       |      |      [Link](/web/gamestore/)      |
+|     7      |     **luxury-car**      |      React       | React landing for detaling car |      |     [Link](/web/luxury-car/)      |
+|     8      | **multilang-portfolio** | Astro, React, TS |   Astro multi-lang portfolio   |      | [Link](/web/multilang-portfolio/) |
+|     9      |   **next-portfolio**    | React, Next, TS  |         Next portfolio         |      |   [Link](/web/next-portfolio/)    |
