@@ -1,0 +1,212 @@
+import { Request, Response } from "express";
+import jwt from "jsonwebtoken";
+import User, { IUser } from "../src/models/User.model";
+import { AuthRequest, ApiResponse, JwtPayload } from "../src/types/index";
+
+// Generating a JWT token
+const generateToken = (user: IUser): string => {
+  return jwt.sign(
+    {
+      userId: user._id,
+      email: user.email,
+      role: user.role,
+    },
+    process.env.JWT_SECRET || "your-secret-key",
+    { expiresIn: process.env.JWT_EXPIRES_IN || "7d" },
+  );
+};
+
+// Registering a new user
+export const register = async (
+  req: Request,
+  res: Response<ApiResponse<{ user: IUser; token: string }>>,
+): Promise<void> => {
+  try {
+    const { email, password, name } = req.body;
+
+    // Checking the existence of a user
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      res.status(400).json({
+        success: false,
+        error: "User with this email already exists",
+      });
+      return;
+    }
+
+    // Create user
+    const user = await User.create({
+      email,
+      password,
+      name,
+    });
+
+    // Generation token
+    const token = generateToken(user);
+
+    res.status(201).json({
+      success: true,
+      message: "User registered successfully",
+      data: {
+        user: user.toJSON(),
+        token,
+      },
+    });
+  } catch (error: any) {
+    console.error("Registration error:", error);
+    res.status(500).json({
+      success: false,
+      error: error.message || "Internal server error",
+    });
+  }
+};
+
+// Enter the user
+export const login = async (
+  req: Request,
+  res: Response<ApiResponse<{ user: IUser; token: string }>>,
+): Promise<void> => {
+  try {
+    const { email, password } = req.body;
+
+    // Find user with password
+    const user = await User.findOne({ email }).select("+password");
+
+    if (!user) {
+      res.status(401).json({
+        success: false,
+        error: "Invalid email or password",
+      });
+      return;
+    }
+
+    // Check password
+    const isPasswordValid = await user.comparePassword(password);
+    if (!isPasswordValid) {
+      res.status(401).json({
+        success: false,
+        error: "Invalid email or password",
+      });
+      return;
+    }
+
+    // Checking account activity
+    if (!user.isActive) {
+      res.status(403).json({
+        success: false,
+        error: "Account is deactivated",
+      });
+      return;
+    }
+
+    // Generation token
+    const token = generateToken(user);
+
+    res.status(200).json({
+      success: true,
+      message: "Login successful",
+      data: {
+        user: user.toJSON(),
+        token,
+      },
+    });
+  } catch (error: any) {
+    console.error("Login error:", error);
+    res.status(500).json({
+      success: false,
+      error: error.message || "Internal server error",
+    });
+  }
+};
+
+// Getting the current user's profile
+export const getProfile = async (
+  req: AuthRequest,
+  res: Response<ApiResponse<IUser>>,
+): Promise<void> => {
+  try {
+    if (!req.user) {
+      res.status(401).json({
+        success: false,
+        error: "Not authenticated",
+      });
+      return;
+    }
+
+    const user = await User.findById(req.user._id);
+
+    if (!user) {
+      res.status(404).json({
+        success: false,
+        error: "User not found",
+      });
+      return;
+    }
+
+    res.status(200).json({
+      success: true,
+      data: user.toJSON(),
+    });
+  } catch (error: any) {
+    console.error("Get profile error:", error);
+    res.status(500).json({
+      success: false,
+      error: error.message || "Internal server error",
+    });
+  }
+};
+
+// Update profile
+export const updateProfile = async (
+  req: AuthRequest,
+  res: Response<ApiResponse<IUser>>,
+): Promise<void> => {
+  try {
+    if (!req.user) {
+      res.status(401).json({
+        success: false,
+        error: "Not authenticated",
+      });
+      return;
+    }
+
+    const { name } = req.body;
+    const updates: Partial<IUser> = {};
+
+    if (name) updates.name = name;
+
+    const user = await User.findByIdAndUpdate(
+      req.user._id,
+      { $set: updates },
+      { new: true, runValidators: true },
+    );
+
+    if (!user) {
+      res.status(404).json({
+        success: false,
+        error: "User not found",
+      });
+      return;
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Profile updated successfully",
+      data: user.toJSON(),
+    });
+  } catch (error: any) {
+    console.error("Update profile error:", error);
+    res.status(500).json({
+      success: false,
+      error: error.message || "Internal server error",
+    });
+  }
+};
+
+// Exit (on the client, simply delete the token)
+export const logout = (req: Request, res: Response<ApiResponse>): void => {
+  res.status(200).json({
+    success: true,
+    message: "Logged out successfully",
+  });
+};

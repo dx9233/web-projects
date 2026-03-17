@@ -1,0 +1,38 @@
+import { Request } from "express";
+// import { IUser } from "../models/User.model";
+
+// Extending the standard Request to add a user
+/* export interface AuthRequest extends Request {
+  user?: IUser;
+} */
+
+// Types for JWT
+export interface JwtPayload {
+  userId: string;
+  email: string;
+  role: string;
+}
+
+// Types for API responses
+export interface ApiResponse<T = any> {
+  success: boolean;
+  message?: string;
+  data?: T;
+  error?: string;
+  pagination?: {
+    page: number;
+    limit: number;
+    total: number;
+    pages: number;
+  };
+}
+
+// Types for products
+export interface IProduct {
+  name: string;
+  price: number;
+  description?: string;
+  category: string;
+  inStock: boolean;
+  imageUrl?: string;
+}

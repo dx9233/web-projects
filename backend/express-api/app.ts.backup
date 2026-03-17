@@ -1,0 +1,48 @@
+import express, { Request, Response } from "express";
+import path from "path";
+import cors from "cors";
+
+const app = express();
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Static files for the frontend and admin panel
+app.use(express.static(path.join(__dirname, "../frontend")));
+app.use("/admin", express.static(path.join(__dirname, "../admin")));
+
+// API routes
+app.get("/api", (req: Request, res: Response) => {
+  res.json({ message: "API is working!" });
+});
+
+app.get("/api/users", (req: Request, res: Response) => {
+  res.json([
+    { id: 1, name: "John" },
+    { id: 2, name: "Jane" },
+  ]);
+});
+
+// Frontend routing (SPA routing)
+app.get("*", (req: Request, res: Response) => {
+  // If the request starts with /api, it is an API
+  if (req.path.startsWith("/api")) {
+    return res.status(404).json({ error: "API endpoint not found" });
+  }
+
+  // If the request is for the admin panel
+  if (req.path.startsWith("/admin")) {
+    return res.sendFile(path.join(__dirname, "../admin/index.html"));
+  }
+
+  // All other requests are frontend
+  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+});
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Frontend: http://localhost:${PORT}`);
+  console.log(`Admin: http://localhost:${PORT}/admin`);
+});
