@@ -1,6 +1,6 @@
-# Auto Rent | React Native Mobile App
+# Car Rent | React Native Mobile App
 
-![Gaming Platform](screenshot.png)
+<img src="./screenshots/screenshot_1.png" width="200" height="400"> <img src="./screenshots/screenshot_2.png" width="200" height="400"> <img src="./screenshots/screenshot_3.png" width="200" height="400"> <img src="./screenshots/screenshot_4.png" width="200" height="400">
 
 - [Design](https://www.figma.com/design/HHizfgRRoHjgkgTO2US01T/%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0-%D0%B0%D0%B2%D1%82%D0%BE?node-id=73-3585&t=IheKKE0DWFoz7KIE-1)
 
