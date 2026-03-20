@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import "./Frame.css";
 
-const Frame = () => {
+const Frame: FC = () => {
   return (
     <section className="frame">
       <div className="frame-wrapper">

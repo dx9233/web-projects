@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { FC, useEffect } from "react";
 
 // Components
 import NavBar from "./components/NavBar";
@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 import "./App.css";
 
-function App() {
+const App: FC = () => {
   useEffect(() => {
     document.title = "Luxury Detailing";
   }, []);
@@ -23,10 +23,10 @@ function App() {
       <Services />
       <Frame />
       <Features />
-      <CtaSection /> 
+      <CtaSection />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,1 +1,1 @@
-// export { default as Projects } from "./Projects";
+// export { default as AlbumCard2 } from "./AlbumCard2";
