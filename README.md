@@ -89,13 +89,10 @@ php -S localhost:8000
 
 ## Projects
 
-|     |        Projects         |      Stack       |          Discription           |                         Demo                          |              Folder               |
-| :-: | :---------------------: | :--------------: | :----------------------------: | :---------------------------------------------------: | :-------------------------------: |
-|  1  |      **astroblog**      |      Astro       |           Astro Blog           |   [Demo](https://celadon-chaja-47fe91.netlify.app/)   |      [Link](/web/astroblog/)      |
-|  2  | **astroblogportfolio**  |      Astro       |      Astro Blog Portfolio      |  [Demo](https://frabjous-mousse-414e9c.netlify.app/)  | [Link](/web/astroblogportfolio/)  |
-|  3  |     **beautysalon**     |       Vue        |      Beauty Salon Vue App      |  [Demo](https://jolly-bublanina-fe63c0.netlify.app/)  |     [Link](/web/beautysalon/)     |
-|  4  |     **gameportal**      |    React, TS     |     React Game Portal App      | [Demo](https://ephemeral-daifuku-c64f71.netlify.app/) |     [Link](/web/gameportal/)      |
-|  5  |     **luxury-car**      |      React       | React landing for detaling car | [Demo](https://tangerine-paletas-eaa001.netlify.app/) |     [Link](/web/luxury-car/)      |
-|  6  | **multilang-portfolio** | Astro, React, TS |   Astro multi-lang portfolio   |   [Demo](https://golden-cactus-9f9351.netlify.app/)   | [Link](/web/multilang-portfolio/) |
-|  7  |   **multilink-astro**   |      Astro       |         Linktree clone         |                       [Demo]()                        |   [Link](/web/multilink-astro/)   |
-|  8  |   **next-portfolio**    | React, Next, TS  |         Next portfolio         |                       [Demo]()                        |   [Link](/web/next-portfolio/)    |
+|     |        Projects        |   Stack   |          Discription           |                         Demo                          |              Folder              |
+| :-: | :--------------------: | :-------: | :----------------------------: | :---------------------------------------------------: | :------------------------------: |
+|  1  |     **astroblog**      |   Astro   |           Astro Blog           |   [Demo](https://celadon-chaja-47fe91.netlify.app/)   |     [Link](/web/astroblog/)      |
+|  2  | **astroblogportfolio** |   Astro   |      Astro Blog Portfolio      |  [Demo](https://frabjous-mousse-414e9c.netlify.app/)  | [Link](/web/astroblogportfolio/) |
+|  3  |    **beautysalon**     |    Vue    |      Beauty Salon Vue App      |  [Demo](https://jolly-bublanina-fe63c0.netlify.app/)  |    [Link](/web/beautysalon/)     |
+|  4  |     **gameportal**     | React, TS |     React Game Portal App      | [Demo](https://ephemeral-daifuku-c64f71.netlify.app/) |     [Link](/web/gameportal/)     |
+|  5  |     **luxury-car**     |   React   | React landing for detaling car | [Demo](https://tangerine-paletas-eaa001.netlify.app/) |     [Link](/web/luxury-car/)     |
