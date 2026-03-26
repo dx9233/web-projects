@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import lang from "../../data/lang.json";
+import Hero from "../../components/react/Hero.jsx";
+
+const currentLang = "ru";
+const t = lang[currentLang];
+const heroData = t.aboutData;
+---
+
+<Layout title={t.meta.title} author={t.meta.author}>
+  <Hero
+    title={heroData.title}
+    subtitle={heroData.subtitle}
+    stack={heroData.stack}
+    contactLink={heroData.contactLink}
+    projectLink={heroData.projectLink}
+    client:visible
+  />
+</Layout>

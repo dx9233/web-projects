@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import lang from "../../data/lang.json";
+import ContactSection from "../../components/react/ContactSection";
+
+const currentLang = "en";
+
+const locale = currentLang;
+const t = lang[locale];
+---
+
+<Layout title="Contact | Dmitry Lean">
+  <main class="content">
+    <ContactSection lang={currentLang} client:visible />
+  </main>
+</Layout>

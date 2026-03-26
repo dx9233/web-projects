@@ -14,7 +14,11 @@ monorepo/
   packages/
     ui/
     utils/
-  screenshoots/
+  personal/
+    mainportfolio/
+    multilink-astro/
+    nextjs-portfolio/
+    react-portfolio/
   web/
     astroblog/
     astroblogportfolio/
@@ -73,6 +77,17 @@ pnpm list -r
 </p>
 
 ## Projects
+
+### Personal
+
+|     |       Projects       |   Stack   |     Discription      |   Demo   |               Folder                |
+| :-: | :------------------: | :-------: | :------------------: | :------: | :---------------------------------: |
+|  1  |  **mainportfolio**   |   Astro   | Astro Blog Portfolio | [Demo]() |  [Link](/personal/mainportfolio/)   |
+|  2  | **multilink-astro**  |   Astro   |   Astro Multilink    | [Demo]() | [Link](/personal/multilink-astro/)  |
+|  3  | **nextjs-portfolio** |  NextJS   |    Next Portfolio    | [Demo]() | [Link](/personal/nextjs-portfolio/) |
+|  4  | **react-portfolio**  | React, TS |   React Portfolio    | [Demo]() | [Link](/personal/react-portfolio/)  |
+
+### Web
 
 |     |        Projects        |   Stack   |          Discription           |                         Demo                          |              Folder              |
 | :-: | :--------------------: | :-------: | :----------------------------: | :---------------------------------------------------: | :------------------------------: |

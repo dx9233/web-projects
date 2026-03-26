@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://adamlean.netlify.app/sitemap.xml

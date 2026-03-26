@@ -1,0 +1,52 @@
+[
+  {
+    "category": "astro",
+    "img": "/assets/img/astroblog.jpg",
+    "title": "Astro Blog",
+    "detailsTitle": "Тема Astro",
+    "description": "Blog template on Astro.",
+    "stack": "Astro",
+    "demo": "https://astro-blogdev.netlify.app",
+    "github": "https://github.com/dmitrylean/astro-blog"
+  },
+  {
+    "category": "astro",
+    "img": "/assets/img/astroblogportfolio.jpg",
+    "title": "Astro Blog + Portfolio",
+    "detailsTitle": "Astro Theme",
+    "description": "Portfolio template with blog functionality on Astro",
+    "stack": "Astro",
+    "demo": "https://astroblogportfolio.netlify.app",
+    "github": "https://github.com/dmitrylean/astroblogportfolio"
+  },
+  {
+    "category": "react",
+    "img": "/assets/img/strikethehub.jpg",
+    "title": "Strike The Hub",
+    "detailsTitle": "React project for a gaming portal",
+    "description": "A project about video games, in which I plan to develop and implement new features.",
+    "stack": "React, Tailwind",
+    "demo": "https://strikethehub.netlify.app",
+    "github": "https://github.com/dmitrylean/strikethehub"
+  },
+  {
+    "category": "react",
+    "img": "/assets/img/musicartist.jpg",
+    "title": "Music Artist",
+    "detailsTitle": "Template for creative professions",
+    "description": "React template for creative professions: musicians, beatmakers, designers, artists, etc.",
+    "stack": "React",
+    "demo": "https://musicprojectreact.netlify.app",
+    "github": "https://github.com/dmitrylean/musicartist-reactapp"
+  },
+  {
+    "category": "react",
+    "img": "/assets/img/luxurycar.jpg",
+    "title": "Luxury Detail",
+    "detailsTitle": "Landing page for a luxury car dealership",
+    "description": "The project is made in HTML/CSS and can be transferred to WordPress.",
+    "stack": "HTML, CSS, Wordpress",
+    "demo": "https://luxurycar-reactlanding.netlify.app/",
+    "github": "https://github.com/dmitrylean/react-landing-luxurycar"
+  }
+]

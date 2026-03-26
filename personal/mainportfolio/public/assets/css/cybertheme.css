@@ -1,0 +1,131 @@
+:root[data-theme="cyber"] {
+  --bg-color: #0d0d0d;
+  --text-color: #e6e6e6;
+  --accent-color: #ff00c1; /* neon pink */
+  --glow-accent: #00fff9; /* neon cyan */
+  --secondary-color: #6c63ff; /* violet */
+  --noise-opacity: 0.07;
+}
+
+/* Background with neon grid */
+body[data-theme="cyber"] {
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+  color: var(--text-color);
+  font-family: "Orbitron", "Share Tech Mono", monospace;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Noise effect overlay */
+body[data-theme="cyber"]::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: var(--noise-opacity);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Neon flicker animation */
+@keyframes neon-flicker {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px var(--accent-color),
+      0 0 20px var(--accent-color);
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow:
+      0 0 2px var(--accent-color),
+      0 0 10px var(--accent-color);
+  }
+}
+
+/* Glitch animation */
+@keyframes glitch {
+  0% {
+    clip-path: inset(0 0 90% 0);
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    clip-path: inset(10% 0 80% 0);
+    transform: translate(2px, 2px);
+  }
+  40% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translate(-2px, 2px);
+  }
+  60% {
+    clip-path: inset(30% 0 40% 0);
+    transform: translate(2px, -2px);
+  }
+  80% {
+    clip-path: inset(40% 0 20% 0);
+    transform: translate(-1px, 1px);
+  }
+  100% {
+    clip-path: inset(0 0 90% 0);
+    transform: translate(0, 0);
+  }
+}
+
+/* Glitch text */
+.glitch {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  animation: neon-flicker 2s infinite alternate;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+.glitch::before {
+  animation: glitch 2s infinite linear alternate-reverse;
+  color: #ff00c1; /* pink ghost */
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch 1.5s infinite linear alternate;
+  color: #00fff9; /* cyan ghost */
+  z-index: -2;
+}
+
+/* Neon button */
+.btn-cyber {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-shadow:
+    0 0 5px var(--accent-color),
+    0 0 10px var(--accent-color);
+}
+
+.btn-cyber:hover {
+  background: var(--accent-color);
+  color: #0d0d0d;
+  box-shadow:
+    0 0 20px var(--accent-color),
+    0 0 40px var(--accent-color);
+}

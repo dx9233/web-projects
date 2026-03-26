@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>404 - Page not found</title>
+    <script>
+      (function () {
+        const userLang =
+          (navigator.languages && navigator.languages[0]) ||
+          navigator.language ||
+          "en";
+        const path = window.location.pathname;
+
+        // redirect only if not already on the localized 404
+        if (userLang.startsWith("ru") && !path.startsWith("/ru/404")) {
+          window.location.replace("/ru/404/");
+        } else if (userLang.startsWith("en") && !path.startsWith("/en/404")) {
+          window.location.replace("/en/404/");
+        } else {
+          // fallback: default to English if neither matches
+          if (!path.startsWith("/en/404")) {
+            window.location.replace("/en/404/");
+          }
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <h1>Redirecting…</h1>
+  </body>
+</html>

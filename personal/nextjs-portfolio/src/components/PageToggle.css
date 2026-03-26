@@ -1,0 +1,70 @@
+.page-toggle-container {
+  margin: 0 auto;
+  padding: 48px 16px;
+  color: #fff;
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Tab buttons */
+.tab-btn {
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: blue;
+}
+
+/* Underline effect */
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: blue;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.tab-btn.active {
+  color: blue;
+  font-weight: 600;
+}
+
+.tab-btn.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Tab content */
+.tab-content {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

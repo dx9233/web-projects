@@ -1,0 +1,91 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CategoryFilter from "../../components/astro/CategoryFilter.astro";
+import langData from "../../data/lang.json";
+import { getCollection } from "astro:content";
+
+const currentLang = "en";
+
+let posts = await getCollection("blog", ({ slug }) =>
+  slug.startsWith(`${currentLang}/`)
+);
+
+posts = posts
+  .sort(
+    (b, a) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  )
+  .reverse();
+
+const categories = [
+  ...new Set(
+    posts.flatMap((p) => {
+      const c = p.data.categories;
+      if (!c) return [];
+      if (Array.isArray(c)) return c;
+      if (typeof c === "string") return [c];
+      return [];
+    })
+  ),
+];
+
+const safeLang: "en" = (Astro.params.lang ?? "en") as "en";
+const catDict = langData[safeLang].categories as Record<string, string>;
+---
+
+<Layout title="Blog | Dmitry Lean">
+  <CategoryFilter
+    categories={categories}
+    currentLang={currentLang}
+    catDict={catDict}
+  />
+
+  <section class="blog">
+    <div class="container">
+      {
+        posts.length > 0 ? (
+          <div class="row g-4">
+            {posts.map((post) => {
+              const [lang, slug] = post.slug.split("/");
+              return (
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <article class="post-card">
+                    {post.data.image && (
+                      <a href={`/${lang}/blog/${slug}`}>
+                        <img
+                          src={post.data.image}
+                          alt={post.data.title}
+                          class="post-image"
+                        />
+                      </a>
+                    )}
+
+                    <div class="post-content">
+                      {post.data.categories && (
+                        <span class="category">{post.data.categories}</span>
+                      )}
+                      <h2 class="post-title">
+                        <a href={`/${lang}/blog/${slug}`}>
+                          {post.data.title as string}
+                        </a>
+                      </h2>
+                      {post.data.description && <p>{post.data.description}</p>}
+                      <div class="post-meta">
+                        <span>
+                          {post.data.date instanceof Date
+                            ? post.data.date.toLocaleDateString(lang)
+                            : post.data.date}
+                        </span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <p>No posts</p>
+        )
+      }
+    </div>
+  </section>
+</Layout>

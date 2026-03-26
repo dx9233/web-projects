@@ -1,0 +1,119 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import CategoryFilter from "../../../components/astro/CategoryFilter.astro";
+import langData from "../../../data/lang.json";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { extractCategories } from "../../../data/content";
+import type { GetStaticPaths } from "astro";
+
+type Lang = "ru" | "en";
+
+interface Props {
+  lang: Lang;
+  category: string;
+  posts: CollectionEntry<"blog">[];
+}
+
+// 1️⃣ Generating paths for categories
+export const getStaticPaths: GetStaticPaths = async () => {
+  const allPosts = await getCollection("blog");
+
+  const paths: Array<{ params: { lang: Lang; category: string } }> = [];
+
+  for (const lang of ["ru", "en"] as const) {
+    const langPosts = allPosts.filter((p) => p.slug.startsWith(`${lang}/`));
+
+    const categories = Array.from(
+      new Set(langPosts.flatMap((p) => extractCategories(p)))
+    );
+
+    categories.forEach((category) => {
+      paths.push({ params: { lang, category } });
+    });
+  }
+
+  return paths;
+};
+
+// 2️⃣ We get the current parameters
+const params = Astro.params as { lang: Lang; category: string };
+const lang = params.lang ?? "ru";
+const category = params.category;
+
+// 3️⃣ All posts for language
+const allPosts = await getCollection("blog");
+const posts = allPosts.filter(
+  (p) =>
+    p.slug.startsWith(`${lang}/`) && extractCategories(p).includes(category)
+);
+
+// 4️⃣ All unique categories for filter
+const categories = [
+  ...new Set(
+    allPosts
+      .filter((p) => p.slug.startsWith(`${lang}/`))
+      .flatMap(extractCategories)
+  ),
+];
+
+// 5️⃣ Dictionary of category translations
+const catDict = (langData as any)[lang].categories as Record<string, string>;
+---
+
+<Layout title={`${catDict[category] ?? category} | Dmitry Lean`}>
+  <!-- ✅ The category filter is available directly on the page -->
+  <CategoryFilter
+    categories={categories}
+    currentLang={lang}
+    catDict={catDict}
+  />
+
+  <main class="content">
+    <section class="blog">
+      <div class="container">
+        <h1>{catDict[category] ?? category}</h1>
+
+        {
+          posts.length > 0 ? (
+            <div class="row g-4">
+              {posts.map((post) => {
+                const [postLang, slug] = post.slug.split("/");
+                return (
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="post-card">
+                      {post.data.image && (
+                        <a href={`/${postLang}/blog/${slug}`}>
+                          <img
+                            src={post.data.image as string}
+                            alt={post.data.title as string}
+                            class="post-image"
+                          />
+                        </a>
+                      )}
+                      <div class="post-content">
+                        <h2 class="post-title">
+                          <a href={`/${postLang}/blog/${slug}`}>
+                            {post.data.title as string}
+                          </a>
+                        </h2>
+                        {post.data.description && (
+                          <p>{post.data.description as string}</p>
+                        )}
+                      </div>
+                    </article>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <p>
+              {lang === "ru"
+                ? "Нет постов в категории"
+                : "No posts in this category"}
+            </p>
+          )
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
