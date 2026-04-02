@@ -4,6 +4,7 @@
 - [Running and building locally](#running-and-building-locally)
 - [Tech Stack](#tech-stack)
 - [Projects](#projects)
+- [Screenshots](#screenshots)
 
 ---
 
@@ -100,3 +101,17 @@ pnpm list -r
 |  4  |     **gameportal**     | React, TS  |     React Game Portal App      | [Demo](https://ephemeral-daifuku-c64f71.netlify.app/) |     [Link](/web/gameportal/)     |
 |  5  |     **gamestore**      | NextJS, TS |       Game Store NextJS        |                       [Demo]()                        |     [Link](/web/gamestore/)      |
 |  6  |     **luxury-car**     |   React    | React landing for detaling car | [Demo](https://tangerine-paletas-eaa001.netlify.app/) |     [Link](/web/luxury-car/)     |
+
+## Screenshot
+
+**NextJS Portfolio**
+
+![Portfolio](/personal/nextjs-portfolio/screenshot.png)
+
+**Beauty Salon | VueJS**
+
+![Beauty Salon](/web/beautysalon/screenshots/screenshot_1.jpg)
+
+**Game Store | NextJS**
+
+![Game Store](/web/gamestore/screenshot.jpg)

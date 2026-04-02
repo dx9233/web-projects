@@ -1,6 +1,6 @@
 # Portfolio | NextJS Website Template
 
-![Luxury Car](screenshot.png)
+![Portfolio](screenshot.png)
 
 - [Design](https://www.figma.com/design/bPqHJBkviciut2f2agXGHT/Landing-page---%D0%9F%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE?node-id=78-874&t=mu1D8y5EYF0fGm3s-1)
 - [Demo](https://dmitrylean.netlify.app/)
